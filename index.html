@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rubera Consulting Limited — Multi-disciplinary engineering consultancy providing sustainable solutions for the Maritime and Offshore Industry. Lagos, Nigeria.">
+  <meta name="keywords" content="naval architecture, maritime engineering, offshore consulting, ship design, Lagos Nigeria, Bureau Veritas certified">
+  <meta property="og:title" content="Rubera Consulting Limited">
+  <meta property="og:description" content="Engineering excellence for the Maritime and Offshore Industry.">
+  <meta property="og:type" content="website">
+  <title>Rubera Consulting Limited — Maritime & Offshore Engineering</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/nav-footer.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    /* ── HOME-SPECIFIC OVERRIDES ─── */
+    .overview-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    @media (max-width: 900px) { .overview-split { grid-template-columns: 1fr; gap: 3rem; } }
+
+    .overview-visual {
+      position: relative;
+      height: 480px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .overview-visual-ship {
+      font-size: 8rem;
+      opacity: 0.25;
+      position: absolute;
+    }
+    .overview-badge-float {
+      position: absolute;
+      bottom: var(--space-xl);
+      left: var(--space-xl);
+      right: var(--space-xl);
+      background: rgba(8,15,58,0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,194,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-xl);
+      display: flex;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .overview-badge-icon { font-size: 2rem; }
+    .overview-badge-text { font-size: var(--text-sm); color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .overview-badge-title { font-weight: 700; color: var(--white); display: block; }
+
+    .overview-certs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      margin-top: var(--space-2xl);
+    }
+
+    /* Services grid layout */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+    }
+    @media (max-width: 1024px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .services-grid { grid-template-columns: 1fr; } }
+
+    /* Why us bento */
+    .why-bento {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+    }
+    @media (max-width: 768px) { .why-bento { grid-template-columns: 1fr; } }
+
+    /* Projects strip */
+    .projects-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: var(--space-xl);
+    }
+    @media (max-width: 1024px) { .projects-strip { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px)  { .projects-strip { grid-template-columns: 1fr; } }
+
+    .project-featured .project-card-image { height: 340px; }
+
+    /* Client logos */
+    .clients-section {
+      background: var(--white);
+      border-top: 1px solid var(--grey-100);
+      border-bottom: 1px solid var(--grey-100);
+    }
+
+    /* Testimonials grid */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+    }
+    @media (max-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .testimonials-grid { grid-template-columns: 1fr; } }
+
+    /* Filter buttons */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-2xl);
+    }
+    .filter-btn {
+      padding: 0.5rem 1.2rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--grey-50);
+      border: 1.5px solid transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+    .filter-btn.active { background: var(--navy-deep); }
+  </style>
+</head>
+
+<body>
+
+<!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Rubera Consulting Home">
+      <div class="nav-logo-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-logo-text">
+        RUBERA
+        <small>Consulting Limited</small>
+      </div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item">
+        <a href="pages/about.html" class="nav-link">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a href="pages/services.html" class="nav-link">Services ▾</a>
+        <div class="nav-dropdown" role="menu">
+          <a href="pages/services.html#naval" role="menuitem"><span>⚓</span> Naval Architecture</a>
+          <a href="pages/services.html#engineering" role="menuitem"><span>⚙️</span> Mechanical Engineering</a>
+          <a href="pages/services.html#outfitting" role="menuitem"><span>🔧</span> Ship Outfitting</a>
+          <a href="pages/services.html#procurement" role="menuitem"><span>📦</span> Procurement & Logistics</a>
+          <a href="pages/services.html#rd" role="menuitem"><span>🔬</span> Research & Development</a>
+          <a href="pages/services.html#infrastructure" role="menuitem"><span>🏗️</span> Infrastructure</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="pages/projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="pages/contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <a href="pages/contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
+  <ul class="nav-mobile-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/about.html">About Us</a></li>
+    <li><a href="pages/services.html">Services</a></li>
+    <li><a href="pages/projects.html">Projects</a></li>
+    <li><a href="pages/contact.html">Contact</a></li>
+  </ul>
+  <a href="pages/contact.html" class="btn btn-primary btn-lg">Get in Touch</a>
+  <div class="nav-mobile-footer">ruberconsultltd.com · Lagos, Nigeria</div>
+</div>
+
+<!-- ══ HERO SECTION ══════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+
+  <div class="container" style="position:relative;z-index:2;width:100%">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        Bureau Veritas Certified · ISO 9001 Registered
+      </div>
+
+      <h1 class="hero-title">
+        Engineering
+        <em class="accent"> Excellence</em>
+        <span class="line2">at Sea</span>
+      </h1>
+
+      <p class="hero-body">
+        Rubera Consulting Limited is a multi-disciplinary team of innovative experts delivering sustainable engineering, infrastructure, and operations solutions for the Maritime and Offshore Industry.
+      </p>
+
+      <div class="hero-actions">
+        <a href="pages/services.html" class="btn btn-primary btn-lg">
+          Explore Services
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="pages/projects.html" class="btn btn-outline btn-lg">View Portfolio</a>
+      </div>
+
+      <div class="hero-stats" role="list">
+        <div class="hero-stat" role="listitem">
+          <div class="hero-stat-num"><span data-counter="15" data-suffix="+">15+</span></div>
+          <div class="hero-stat-label">Years Experience</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="hero-stat-num"><span data-counter="50" data-suffix="+">50+</span></div>
+          <div class="hero-stat-label">Projects Delivered</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="hero-stat-num"><span data-counter="8" data-suffix="">8</span></div>
+          <div class="hero-stat-label">Core Services</div>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <div class="hero-stat-num"><span data-counter="3">3</span></div>
+          <div class="hero-stat-label">Certifications Held</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating certification badges -->
+  <div class="hero-visual" aria-hidden="true">
+    <div class="hero-badge hero-badge-bv" aria-hidden="true">
+      <div class="hero-badge-label">Bureau Veritas</div>
+      <div class="hero-badge-value">
+        <span class="check">✓</span> BV Mode II Scheme
+      </div>
+    </div>
+    <div class="hero-badge hero-badge-cert" aria-hidden="true">
+      <div class="hero-badge-label">Certification</div>
+      <div class="hero-badge-value">ISO 9001:2015</div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-indicator-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══ ACCREDITATION STRIP ═══════════════════════════════════ -->
+<div class="accreditation-strip" aria-label="Accreditations">
+  <div class="container">
+    <div class="accreditation-items">
+      <div class="accreditation-item">
+        <div class="check" aria-hidden="true">✓</div>
+        <span>Bureau Veritas — BV Mode II Scheme</span>
+      </div>
+      <div class="accreditation-item">
+        <div class="check" aria-hidden="true">✓</div>
+        <span>ISO 9001:2015 Certified</span>
+      </div>
+      <div class="accreditation-item">
+        <div class="check" aria-hidden="true">✓</div>
+        <span>GRP Passenger & Cargo Vessel Production</span>
+      </div>
+      <div class="accreditation-item">
+        <div class="check" aria-hidden="true">✓</div>
+        <span>Inland Waterways Certified</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ COMPANY OVERVIEW ═══════════════════════════════════════ -->
+<section class="section bg-white" id="overview" aria-labelledby="overview-title">
+  <div class="container">
+    <div class="overview-split">
+      <div data-reveal>
+        <span class="section-eyebrow">About Rubera</span>
+        <h2 class="section-title" id="overview-title">
+          Bespoke Engineering for a Complex Industry
+        </h2>
+        <p class="section-body" style="margin-top:1.5rem">
+          Rubera Consulting Limited is a multi-disciplinary team of innovative and dedicated experts driven by talent, integrity, and aspiration to provide sustainable solutions and services in Engineering, Infrastructure, and Operations for the Maritime and Offshore Industry.
+        </p>
+        <p class="section-body" style="margin-top:1rem">
+          As inventive thinkers and expert collaborators, we combine our expertise, offering bespoke service tailored to fit project requirements and help our clients discover efficient and cost-effective ways of achieving set goals.
+        </p>
+        <div style="margin-top:var(--space-2xl); display:flex; flex-wrap:wrap; gap:var(--space-md)">
+          <a href="pages/about.html" class="btn btn-navy">
+            Our Story
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="pages/contact.html" class="btn btn-outline" style="color:var(--navy);border-color:var(--grey-200)">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="overview-visual" data-reveal data-reveal-delay="2">
+        <div class="overview-visual-ship" aria-hidden="true">⚓</div>
+        <div class="overview-badge-float">
+          <div class="overview-badge-icon" aria-hidden="true">🏆</div>
+          <div class="overview-badge-text">
+            <span class="overview-badge-title">Bureau Veritas Certified</span>
+            Recognised for production of GRP Passenger & Cargo Vessels for Inland Waterways — valid through Nov 2027.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certification row -->
+    <div class="overview-certs" data-reveal data-reveal-delay="3">
+      <div class="cert-badge">
+        <div class="cert-badge-icon" aria-hidden="true">🔰</div>
+        <div>
+          <div class="cert-badge-title">Bureau Veritas</div>
+          <div class="cert-badge-text">Marine & Offshore Recognition</div>
+        </div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-badge-icon" aria-hidden="true">📋</div>
+        <div>
+          <div class="cert-badge-title">ISO 9001:2015</div>
+          <div class="cert-badge-text">Quality Management Certified</div>
+        </div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-badge-icon" aria-hidden="true">⚓</div>
+        <div>
+          <div class="cert-badge-title">Naval Architecture</div>
+          <div class="cert-badge-text">Design Approvals Granted</div>
+        </div>
+      </div>
+      <div class="cert-badge">
+        <div class="cert-badge-icon" aria-hidden="true">🌊</div>
+        <div>
+          <div class="cert-badge-title">Inland Waterways</div>
+          <div class="cert-badge-text">Lagos — Nigeria Operations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES SECTION ═══════════════════════════════════════ -->
+<section class="section bg-light" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div style="max-width:600px; margin-bottom:var(--space-3xl)" data-reveal>
+      <span class="section-eyebrow">What We Do</span>
+      <h2 class="section-title" id="services-title">
+        Our Service <span>Interests</span>
+      </h2>
+      <p class="section-body" style="margin-top:1.5rem">
+        Our team offers a comprehensive range of specialised services across the maritime value chain — from concept design to operational delivery.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <article class="service-card" data-reveal data-reveal-delay="1">
+        <div class="service-card-number" aria-hidden="true">01</div>
+        <div class="service-card-icon" aria-hidden="true">⚓</div>
+        <h3 class="service-card-title">Naval Architecture & Mechanical Engineering</h3>
+        <p class="service-card-body">Full-cycle vessel design including hull form development, stability analysis, structural engineering, and class approval. From houseboats to patrol boats.</p>
+        <div class="service-card-tags">
+          <span class="tag">Hull Design</span>
+          <span class="tag">Stability</span>
+          <span class="tag">Class Approval</span>
+        </div>
+        <a href="pages/services.html#naval" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 2 -->
+      <article class="service-card" data-reveal data-reveal-delay="2">
+        <div class="service-card-number" aria-hidden="true">02</div>
+        <div class="service-card-icon" aria-hidden="true">🔧</div>
+        <h3 class="service-card-title">Ship Outfitting & Retrofitting</h3>
+        <p class="service-card-body">Comprehensive outfitting services for new builds and vessel modification programmes. Accommodation assembly, systems integration, and finish work.</p>
+        <div class="service-card-tags">
+          <span class="tag">Outfitting</span>
+          <span class="tag">Retrofitting</span>
+          <span class="tag">Accommodation</span>
+        </div>
+        <a href="pages/services.html#outfitting" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 3 -->
+      <article class="service-card" data-reveal data-reveal-delay="3">
+        <div class="service-card-number" aria-hidden="true">03</div>
+        <div class="service-card-icon" aria-hidden="true">📊</div>
+        <h3 class="service-card-title">Project & Resources Management</h3>
+        <p class="service-card-body">End-to-end project governance, stakeholder coordination, and resource optimisation. Proven delivery on complex multi-party maritime projects.</p>
+        <div class="service-card-tags">
+          <span class="tag">PMO</span>
+          <span class="tag">Scheduling</span>
+          <span class="tag">Risk</span>
+        </div>
+        <a href="pages/services.html#pm" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 4 -->
+      <article class="service-card" data-reveal data-reveal-delay="1">
+        <div class="service-card-number" aria-hidden="true">04</div>
+        <div class="service-card-icon" aria-hidden="true">📦</div>
+        <h3 class="service-card-title">Global Procurement & Logistics</h3>
+        <p class="service-card-body">Strategic sourcing, supply chain management, and international logistics for shipbuilding equipment, materials, and outfitting components.</p>
+        <div class="service-card-tags">
+          <span class="tag">Procurement</span>
+          <span class="tag">Supply Chain</span>
+          <span class="tag">Logistics</span>
+        </div>
+        <a href="pages/services.html#procurement" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 5 -->
+      <article class="service-card" data-reveal data-reveal-delay="2">
+        <div class="service-card-number" aria-hidden="true">05</div>
+        <div class="service-card-icon" aria-hidden="true">🔬</div>
+        <h3 class="service-card-title">Research & Development / Feasibility Studies</h3>
+        <p class="service-card-body">Innovative R&D on emerging marine technologies including electric outboard propulsion and CNG hybrid systems. Evidence-based feasibility reporting.</p>
+        <div class="service-card-tags">
+          <span class="tag">Electric Propulsion</span>
+          <span class="tag">CNG Hybrid</span>
+          <span class="tag">Feasibility</span>
+        </div>
+        <a href="pages/services.html#rd" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Service 6 -->
+      <article class="service-card" data-reveal data-reveal-delay="3">
+        <div class="service-card-number" aria-hidden="true">06</div>
+        <div class="service-card-icon" aria-hidden="true">🏗️</div>
+        <h3 class="service-card-title">Infrastructure Development & Facility Management</h3>
+        <p class="service-card-body">Boatyard optimisation, expansion, and operations management. Creating efficient marine infrastructure for sustainable long-term operations.</p>
+        <div class="service-card-tags">
+          <span class="tag">Boatyard</span>
+          <span class="tag">Infrastructure</span>
+          <span class="tag">Facility Mgmt</span>
+        </div>
+        <a href="pages/services.html#infrastructure" class="service-card-link">
+          Learn More
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+
+    <div style="text-align:center; margin-top:var(--space-3xl)" data-reveal>
+      <a href="pages/services.html" class="btn btn-navy btn-lg">
+        All Services
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SELECTED PROJECTS ══════════════════════════════════════ -->
+<section class="section bg-white" id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:var(--space-xl); margin-bottom:var(--space-3xl)">
+      <div data-reveal>
+        <span class="section-eyebrow">Selected Works</span>
+        <h2 class="section-title" id="projects-title">Projects We've <span>Delivered</span></h2>
+      </div>
+      <a href="pages/projects.html" class="btn btn-outline" style="color:var(--navy);border-color:var(--grey-200)" data-reveal data-reveal-delay="2">
+        Full Portfolio
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="projects-strip">
+      <!-- Featured -->
+      <article class="project-card project-featured" data-reveal>
+        <div class="project-card-image">
+          <div class="project-img-placeholder" role="img" aria-label="40-Passenger Ferry Design">
+            🚢
+            <p>Passenger Ferry</p>
+          </div>
+          <div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div>
+          <div class="project-card-overlay"></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-category">Naval Architecture & Engineering</div>
+          <h3 class="project-card-title">40-Passenger Ferry Design & BV Approval</h3>
+          <p class="project-card-desc">Full design package for a 40-passenger inland waterway ferry, including longitudinal section, structural analysis, and Bureau Veritas design approval.</p>
+          <div class="project-card-meta">
+            <div class="project-card-client">
+              <strong>Bureau Veritas Stamped</strong>
+              Lagos — Nigeria
+            </div>
+            <a href="pages/projects.html" class="btn btn-navy" style="padding:0.5rem 1.2rem;font-size:var(--text-xs)">View</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Side projects -->
+      <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+        <article class="project-card" data-reveal data-reveal-delay="2">
+          <div class="project-card-image" style="height:180px">
+            <div class="project-img-placeholder" role="img" aria-label="NN01 Yacht Outfitting">
+              ⛵
+              <p>Yacht</p>
+            </div>
+            <div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-category">Ship Outfitting & Retrofitting</div>
+            <h3 class="project-card-title">NN01 Yacht — Complete Outfitting</h3>
+            <p class="project-card-desc">Full interior outfitting including accommodation assembly, systems integration, and finishing works for a private motor yacht.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal data-reveal-delay="3">
+          <div class="project-card-image" style="height:180px">
+            <div class="project-img-placeholder" role="img" aria-label="Sea Defence Boat III">
+              🛥️
+              <p>Defence Boat</p>
+            </div>
+            <div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-category">Ship Outfitting</div>
+            <h3 class="project-card-title">Sea Defence Boat III</h3>
+            <p class="project-card-desc">Outfitting programme for Nigeria's Sea Defence Boat III — military-grade accommodation and systems installation.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Third column -->
+      <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+        <article class="project-card" data-reveal data-reveal-delay="2">
+          <div class="project-card-image" style="height:180px">
+            <div class="project-img-placeholder" role="img" aria-label="OMIBUS Passenger Ferries">
+              🚤
+              <p>Ferry Fleet</p>
+            </div>
+            <div class="project-card-badge"><span class="tag tag-navy">PM</span></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-category">Project Management</div>
+            <h3 class="project-card-title">OMIBUS Passenger Ferries</h3>
+            <p class="project-card-desc">Project and resources management for the OMIBUS fleet of passenger ferries serving Nigerian waterways.</p>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal data-reveal-delay="3">
+          <div class="project-card-image" style="height:180px">
+            <div class="project-img-placeholder" role="img" aria-label="Electric Outboard Propulsion R&D">
+              ⚡
+              <p>Electric Marine</p>
+            </div>
+            <div class="project-card-badge"><span class="tag tag-navy">R&D</span></div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-category">Research & Development</div>
+            <h3 class="project-card-title">Electric Outboard Propulsion Study</h3>
+            <p class="project-card-desc">Feasibility study and development programme for electric outboard propulsion systems and CNG hybrid alternatives.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY CHOOSE US ══════════════════════════════════════════ -->
+<section class="section bg-navy" id="why-us" aria-labelledby="why-title" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 10% 50%, rgba(0,194,255,0.07) 0%, transparent 60%);pointer-events:none" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+      <div data-reveal>
+        <span class="section-eyebrow">Why Rubera</span>
+        <h2 class="section-title light" id="why-title">
+          What Makes Us <span>Different</span>
+        </h2>
+        <p class="section-body light" style="margin-top:1.5rem">
+          We bring together deep technical expertise, certified quality systems, and a genuine commitment to client outcomes — delivering projects that are on time, within scope, and built to last.
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);margin-top:var(--space-3xl)">
+          <div>
+            <div class="stat-number" data-counter="15" data-suffix="+">15+</div>
+            <div class="stat-label">Years in Maritime Industry</div>
+          </div>
+          <div>
+            <div class="stat-number" data-counter="50" data-suffix="+">50+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div>
+            <div class="stat-number" data-counter="9" data-suffix="">9</div>
+            <div class="stat-label">Institutional Clients</div>
+          </div>
+          <div>
+            <div class="stat-number">BV</div>
+            <div class="stat-label">Certified Excellence</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:var(--space-lg)" data-reveal data-reveal-delay="2">
+        <div class="why-item" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:var(--space-xl);gap:var(--space-lg)">
+          <div class="why-number" style="color:rgba(0,194,255,0.2);width:auto">01</div>
+          <div>
+            <h3 class="why-title" style="color:var(--white)">Certified Technical Excellence</h3>
+            <p class="why-body" style="color:rgba(255,255,255,0.6)">Bureau Veritas Mode II recognition and ISO 9001:2015 certification provide independent validation of our technical and quality standards.</p>
+          </div>
+        </div>
+        <div class="why-item" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:var(--space-xl);gap:var(--space-lg)">
+          <div class="why-number" style="color:rgba(0,194,255,0.2);width:auto">02</div>
+          <div>
+            <h3 class="why-title" style="color:var(--white)">Bespoke, Client-First Approach</h3>
+            <p class="why-body" style="color:rgba(255,255,255,0.6)">Every engagement is tailored. We combine our expertise to fit your specific project requirements, helping you achieve goals efficiently and cost-effectively.</p>
+          </div>
+        </div>
+        <div class="why-item" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-lg);padding:var(--space-xl);gap:var(--space-lg)">
+          <div class="why-number" style="color:rgba(0,194,255,0.2);width:auto">03</div>
+          <div>
+            <h3 class="why-title" style="color:var(--white)">Multi-Disciplinary Expertise</h3>
+            <p class="why-body" style="color:rgba(255,255,255,0.6)">Naval architects, mechanical engineers, project managers, and supply chain specialists working together under one roof for integrated project delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENTS STRIP ══════════════════════════════════════════ -->
+<section class="clients-section section-sm" aria-label="Clients and Partners">
+  <div class="container" style="margin-bottom:var(--space-xl)">
+    <div style="text-align:center" data-reveal>
+      <span class="section-eyebrow">Companies We've Worked With</span>
+      <p style="color:var(--text-muted);font-size:var(--text-base);margin-top:var(--space-sm)">Trusted by leading marine and offshore organisations across Nigeria</p>
+    </div>
+  </div>
+  <div class="clients-mask">
+    <div class="clients-track" aria-label="Client logos" role="list">
+      <div class="client-logo" role="listitem">Naval Dockyards Ltd</div>
+      <div class="client-logo" role="listitem">Renotec</div>
+      <div class="client-logo" role="listitem">Gelose Marine Services</div>
+      <div class="client-logo" role="listitem">Caverton Marine</div>
+      <div class="client-logo" role="listitem">Starzs Marine & Engineering</div>
+      <div class="client-logo" role="listitem">Raphwell Engineering & Logistics</div>
+      <div class="client-logo" role="listitem">Abitto Global Services</div>
+      <div class="client-logo" role="listitem">Bureau Veritas</div>
+      <div class="client-logo" role="listitem">NARCOS Shipyard</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ═══════════════════════════════════════════ -->
+<section class="section bg-light" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:var(--space-3xl)" data-reveal>
+      <span class="section-eyebrow">Client Feedback</span>
+      <h2 class="section-title" id="testimonials-title">What Our <span>Clients Say</span></h2>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card" data-reveal data-reveal-delay="1">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-body">"Rubera's team delivered our ferry design package on schedule with Bureau Veritas approval secured first time. Their technical depth and professionalism are exceptional."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">CN</div>
+          <div>
+            <div class="testimonial-name">Client Representative</div>
+            <div class="testimonial-role">Naval Dockyards Ltd</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-reveal data-reveal-delay="2">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-body">"The outfitting work on our yacht was meticulously executed — every detail was right. Rubera brought creative solutions to complex installation challenges."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">GM</div>
+          <div>
+            <div class="testimonial-name">Project Owner</div>
+            <div class="testimonial-role">Private Yacht — NN01</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial-card" data-reveal data-reveal-delay="3">
+        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="testimonial-body">"Their project management on the OMIBUS ferries programme kept everything aligned across multiple stakeholders. Diligent, professional, and results-driven."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar" aria-hidden="true">AB</div>
+          <div>
+            <div class="testimonial-name">Programme Director</div>
+            <div class="testimonial-role">OMIBUS Ferry Programme</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA SECTION ════════════════════════════════════════════ -->
+<section class="section cta-section" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-content" data-reveal>
+      <h2 class="cta-title">Ready to Start Your <span>Next Project?</span></h2>
+      <p class="cta-body">Whether you need naval architecture, vessel outfitting, procurement support, or feasibility research — we have the expertise and certifications to deliver.</p>
+      <div class="cta-actions">
+        <a href="pages/contact.html" class="btn btn-primary btn-lg">
+          Talk to Our Team
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="pages/services.html" class="btn btn-outline btn-lg">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-watermark" aria-hidden="true">RCL</div>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="nav-logo-mark" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="footer-logo-text">
+              RUBERA
+              <small>Consulting Limited</small>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Multi-disciplinary engineering experts delivering sustainable solutions for the Maritime and Offshore Industry. Talent. Integrity. Aspiration.
+          </p>
+          <div class="footer-certifications">
+            <span class="footer-cert-badge">Bureau Veritas</span>
+            <span class="footer-cert-badge">ISO 9001:2015</span>
+            <span class="footer-cert-badge">BV Mode II</span>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="social-link" aria-label="Email">✉</a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="pages/about.html">About Us</a>
+            <a href="pages/services.html">Services</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="pages/contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <div class="footer-col-title">Services</div>
+          <nav class="footer-links" aria-label="Services navigation">
+            <a href="pages/services.html#naval">Naval Architecture</a>
+            <a href="pages/services.html#engineering">Mech. Engineering</a>
+            <a href="pages/services.html#outfitting">Ship Outfitting</a>
+            <a href="pages/services.html#procurement">Global Procurement</a>
+            <a href="pages/services.html#rd">Research & Development</a>
+            <a href="pages/services.html#infrastructure">Infrastructure</a>
+            <a href="pages/services.html#training">Training Development</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon" aria-hidden="true">📍</div>
+            <div class="footer-contact-text">
+              <strong>Address</strong>
+              23 Platinum Way (Jakande),<br>Lekki–Epe Expressway, Lagos
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon" aria-hidden="true">🌐</div>
+            <div class="footer-contact-text">
+              <strong>Website</strong>
+              <a href="https://www.ruberconsultltd.com" target="_blank" rel="noopener">ruberconsultltd.com</a>
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon" aria-hidden="true">✉️</div>
+            <div class="footer-contact-text">
+              <strong>Email</strong>
+              <a href="mailto:info@ruberconsultltd.com">info@ruberconsultltd.com</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">
+          &copy; <span id="footer-year">2025</span> <span>Rubera Consulting Limited.</span> All rights reserved. Registered in Nigeria.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="pages/contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Update footer year dynamically
+  const el = document.getElementById('footer-year');
+  if (el) el.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
