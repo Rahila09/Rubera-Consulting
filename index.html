@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rubera Consulting Limited — Multi-disciplinary maritime engineering consultancy. Naval Architecture, Ship Outfitting, Project Management, Procurement, R&D. Bureau Veritas Certified. Lagos, Nigeria.">
+<meta name="keywords" content="naval architecture, maritime engineering, ship design, offshore consulting, Bureau Veritas, Lagos Nigeria">
+<title>Rubera Consulting Limited — Maritime & Offshore Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   RUBERA CONSULTING LIMITED — COMPLETE STYLESHEET
+   All CSS inlined: variables · reset · layout · components
+   ============================================================ */
+
+/* ── VARIABLES ──────────────────────────────────────────────── */
+:root {
+  --navy:#0D1B5E; --navy-deep:#080F3A; --navy-mid:#162278; --navy-light:#1E3A8A;
+  --cyan:#00C2FF; --cyan-dim:#0096CC; --cyan-glow:rgba(0,194,255,0.18);
+  --white:#FFFFFF; --off-white:#F8FAFC; --grey-50:#F1F5F9; --grey-100:#E2E8F0;
+  --grey-200:#CBD5E1; --grey-400:#94A3B8; --grey-600:#475569; --text:#1E293B;
+  --text-muted:#64748B; --gold:#F59E0B; --success:#10B981;
+  --space-xs:.25rem; --space-sm:.5rem; --space-md:1rem; --space-lg:1.5rem;
+  --space-xl:2rem; --space-2xl:3rem; --space-3xl:5rem; --space-4xl:8rem;
+  --text-xs:.75rem; --text-sm:.875rem; --text-base:1rem; --text-lg:1.125rem;
+  --text-xl:1.25rem; --text-2xl:1.5rem; --text-3xl:1.875rem; --text-4xl:2.25rem;
+  --text-5xl:3rem; --text-6xl:3.75rem; --text-8xl:6rem;
+  --font-display:'Barlow Condensed',sans-serif; --font-body:'DM Sans',sans-serif;
+  --radius-sm:4px; --radius-md:8px; --radius-lg:16px; --radius-xl:24px; --radius-full:9999px;
+  --shadow-sm:0 1px 3px rgba(13,27,94,.08); --shadow-md:0 4px 16px rgba(13,27,94,.12);
+  --shadow-lg:0 10px 40px rgba(13,27,94,.18); --shadow-xl:0 20px 60px rgba(13,27,94,.25);
+  --shadow-cyan:0 0 30px rgba(0,194,255,.25); --transition:all .3s cubic-bezier(.4,0,.2,1);
+  --max-width:1280px; --nav-height:80px;
+}
+
+/* ── RESET ──────────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);font-size:var(--text-base);color:var(--text);background:var(--white);line-height:1.6;overflow-x:hidden}
+img,svg,video{display:block;max-width:100%}
+input,button,textarea,select{font:inherit}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{cursor:pointer;background:none;border:none}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--off-white)}
+::-webkit-scrollbar-thumb{background:var(--navy-light);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--cyan-dim)}
+
+/* ── LAYOUT ─────────────────────────────────────────────────── */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 var(--space-xl)}
+@media(max-width:768px){.container{padding:0 var(--space-lg)}}
+@media(max-width:480px){.container{padding:0 var(--space-md)}}
+.section{padding:var(--space-4xl) 0}
+.section-sm{padding:var(--space-3xl) 0}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-xl)}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl)}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-lg)}
+@media(max-width:1024px){.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+@media(max-width:768px){.section{padding:var(--space-3xl) 0}}
+
+/* ── TYPOGRAPHY UTILITIES ───────────────────────────────────── */
+.section-eyebrow{display:inline-flex;align-items:center;gap:var(--space-sm);font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);margin-bottom:var(--space-md)}
+.section-eyebrow::before{content:'';display:block;width:24px;height:2px;background:var(--cyan);border-radius:2px}
+.section-title{font-family:var(--font-display);font-size:clamp(var(--text-4xl),5vw,var(--text-6xl));font-weight:800;color:var(--navy-deep);line-height:1.05;letter-spacing:-.02em}
+.section-title.light{color:var(--white)}
+.section-title span{color:var(--cyan)}
+.section-body{font-size:var(--text-lg);color:var(--text-muted);max-width:640px;line-height:1.75}
+.section-body.light{color:rgba(255,255,255,.75)}
+
+/* ── BUTTONS ────────────────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;gap:var(--space-sm);padding:.85rem 2rem;border-radius:var(--radius-full);font-family:var(--font-body);font-size:var(--text-sm);font-weight:600;letter-spacing:.04em;transition:var(--transition);white-space:nowrap;border:none}
+.btn-primary{background:var(--cyan);color:var(--navy-deep)}
+.btn-primary:hover{background:var(--white);color:var(--navy-deep);transform:translateY(-2px);box-shadow:var(--shadow-cyan)}
+.btn-outline{border:1.5px solid rgba(255,255,255,.35);color:var(--white);background:transparent}
+.btn-outline:hover{background:rgba(255,255,255,.1);border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:var(--white)}
+.btn-navy:hover{background:var(--navy-mid);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+.btn-lg{padding:1rem 2.5rem;font-size:var(--text-base)}
+.btn svg,.btn .btn-icon{width:18px;height:18px;transition:transform .2s}
+.btn:hover .btn-icon{transform:translateX(4px)}
+
+/* ── TAGS ───────────────────────────────────────────────────── */
+.tag{display:inline-block;padding:.25rem .75rem;background:var(--cyan-glow);color:var(--cyan);border:1px solid rgba(0,194,255,.25);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.tag-navy{background:var(--navy);color:var(--cyan);border-color:rgba(0,194,255,.3)}
+
+/* ── CARDS ──────────────────────────────────────────────────── */
+.card{background:var(--white);border-radius:var(--radius-lg);padding:var(--space-2xl);box-shadow:var(--shadow-sm);border:1px solid var(--grey-100);transition:var(--transition)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(0,194,255,.2)}
+
+/* ── BG HELPERS ─────────────────────────────────────────────── */
+.bg-navy{background:var(--navy-deep);color:var(--white)}
+.bg-light{background:var(--off-white)}
+.bg-white{background:var(--white)}
+
+/* ── STAT NUMBERS ───────────────────────────────────────────── */
+.stat-number{font-family:var(--font-display);font-size:var(--text-5xl);font-weight:800;color:var(--cyan);line-height:1;letter-spacing:-.02em}
+.stat-label{font-size:var(--text-sm);color:rgba(255,255,255,.65);font-weight:500;margin-top:.35rem;text-transform:uppercase;letter-spacing:.08em}
+
+/* ── FORM ELEMENTS ──────────────────────────────────────────── */
+.form-group{display:flex;flex-direction:column;gap:var(--space-xs)}
+.form-label{font-size:var(--text-sm);font-weight:500;color:var(--text)}
+.form-input,.form-textarea,.form-select{padding:.8rem 1rem;border:1.5px solid var(--grey-200);border-radius:var(--radius-md);font-size:var(--text-base);color:var(--text);background:var(--white);transition:border-color .2s,box-shadow .2s;outline:none;width:100%}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--cyan-dim);box-shadow:0 0 0 3px rgba(0,194,255,.12)}
+.form-textarea{min-height:130px;resize:vertical}
+.form-error{font-size:var(--text-xs);color:#EF4444}
+.form-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2364748B' viewBox='0 0 16 16'%3E%3Cpath d='M8 10.5L2 4.5h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem}
+
+/* ── SCROLL REVEAL ──────────────────────────────────────────── */
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+[data-reveal].revealed{opacity:1;transform:translateY(0)}
+[data-reveal-delay="1"]{transition-delay:.1s}
+[data-reveal-delay="2"]{transition-delay:.2s}
+[data-reveal-delay="3"]{transition-delay:.3s}
+[data-reveal-delay="4"]{transition-delay:.4s}
+[data-reveal-delay="5"]{transition-delay:.5s}
+
+/* ── PAGE TRANSITIONS ───────────────────────────────────────── */
+.page-view{display:none;animation:pageFadeIn .45s ease forwards}
+.page-view.active{display:block}
+@keyframes pageFadeIn{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAVIGATION ─────────────────────────────────────────────── */
+.nav{position:fixed;top:0;left:0;right:0;height:var(--nav-height);z-index:1000;transition:background .4s ease,box-shadow .4s ease}
+.nav.scrolled,.nav.nav-solid{background:rgba(8,15,58,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,194,255,.12),0 8px 30px rgba(0,0,0,.3)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%}
+.nav-logo{display:flex;align-items:center;gap:var(--space-sm);text-decoration:none;flex-shrink:0;cursor:pointer}
+.nav-logo-mark{display:flex;flex-direction:column;gap:3px}
+.nav-logo-mark span{display:block;background:var(--cyan);border-radius:2px;transition:width .3s}
+.nav-logo-mark span:nth-child(1){width:28px;height:3px}
+.nav-logo-mark span:nth-child(2){width:20px;height:3px}
+.nav-logo-mark span:nth-child(3){width:24px;height:3px}
+.nav-logo:hover .nav-logo-mark span:nth-child(2){width:28px}
+.nav-logo-text{font-family:var(--font-display);font-size:1.35rem;font-weight:800;letter-spacing:.05em;color:var(--white);line-height:1}
+.nav-logo-text small{display:block;font-size:.6rem;font-weight:400;letter-spacing:.2em;color:var(--cyan);text-transform:uppercase}
+.nav-links{display:flex;align-items:center;gap:var(--space-xs);list-style:none}
+.nav-link{position:relative;padding:.5rem .85rem;font-size:var(--text-sm);font-weight:500;color:rgba(255,255,255,.8);text-decoration:none;border-radius:var(--radius-md);transition:color .2s,background .2s;cursor:pointer;border:none;background:none;font-family:var(--font-body)}
+.nav-link:hover,.nav-link.active{color:var(--white);background:rgba(255,255,255,.08)}
+.nav-link.active::after{content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:20px;height:2px;background:var(--cyan);border-radius:1px}
+.nav-item{position:relative}
+.nav-dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(8px);min-width:220px;background:var(--navy-deep);border:1px solid rgba(0,194,255,.15);border-radius:var(--radius-lg);padding:var(--space-sm);box-shadow:0 20px 60px rgba(0,0,0,.4);opacity:0;visibility:hidden;transition:all .25s cubic-bezier(.4,0,.2,1);z-index:100}
+.nav-item:hover .nav-dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.nav-dropdown a,.nav-dropdown button{display:flex;align-items:center;gap:var(--space-sm);padding:.6rem 1rem;font-size:var(--text-sm);color:rgba(255,255,255,.75);border-radius:var(--radius-md);transition:all .2s;width:100%;text-align:left;cursor:pointer;border:none;background:none;font-family:var(--font-body)}
+.nav-dropdown a:hover,.nav-dropdown button:hover{color:var(--cyan);background:rgba(0,194,255,.08)}
+.nav-cta{margin-left:var(--space-md)}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;padding:var(--space-sm);cursor:pointer;z-index:1001}
+.nav-hamburger span{display:block;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+.nav-hamburger span:nth-child(1){width:26px}
+.nav-hamburger span:nth-child(2){width:20px}
+.nav-hamburger span:nth-child(3){width:26px}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);width:26px}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);width:26px}
+.nav-mobile{position:fixed;inset:0;background:var(--navy-deep);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-xl);opacity:0;visibility:hidden;transition:all .4s cubic-bezier(.4,0,.2,1);padding:var(--space-4xl) var(--space-xl)}
+.nav-mobile.open{opacity:1;visibility:visible}
+.nav-mobile-links{display:flex;flex-direction:column;align-items:center;gap:var(--space-md);list-style:none;text-align:center}
+.nav-mobile-links button{font-family:var(--font-display);font-size:var(--text-4xl);font-weight:700;color:var(--white);opacity:.8;transition:all .2s;letter-spacing:-.01em;border:none;background:none;cursor:pointer}
+.nav-mobile-links button:hover{opacity:1;color:var(--cyan)}
+@media(max-width:1024px){.nav-links,.nav-cta{display:none}.nav-hamburger{display:flex}}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+.footer{background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:.4}
+.footer-watermark{position:absolute;bottom:-30px;right:-20px;font-family:var(--font-display);font-size:22vw;font-weight:900;color:rgba(255,255,255,.02);letter-spacing:-.05em;pointer-events:none;user-select:none;line-height:1}
+.footer-main{padding:var(--space-4xl) 0 var(--space-3xl)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:var(--space-3xl)}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:var(--space-2xl)}}
+@media(max-width:640px){.footer-grid{grid-template-columns:1fr}}
+.footer-logo{display:flex;align-items:center;gap:var(--space-sm);margin-bottom:var(--space-lg)}
+.footer-logo-text{font-family:var(--font-display);font-size:1.5rem;font-weight:800;letter-spacing:.05em;color:var(--white);line-height:1}
+.footer-logo-text small{display:block;font-size:.55rem;letter-spacing:.2em;color:var(--cyan);font-weight:400}
+.footer-tagline{font-size:var(--text-sm);color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:var(--space-xl);max-width:280px}
+.footer-certifications{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-top:var(--space-lg)}
+.footer-cert-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:rgba(0,194,255,.08);border:1px solid rgba(0,194,255,.2);border-radius:var(--radius-full);font-size:11px;color:rgba(255,255,255,.7);font-weight:500}
+.footer-cert-badge::before{content:'✓';color:var(--cyan);font-size:10px}
+.footer-col-title{font-family:var(--font-body);font-size:var(--text-xs);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:var(--space-lg)}
+.footer-links{display:flex;flex-direction:column;gap:var(--space-sm)}
+.footer-links button{font-size:var(--text-sm);color:rgba(255,255,255,.55);transition:color .2s;display:flex;align-items:center;gap:var(--space-xs);border:none;background:none;cursor:pointer;font-family:var(--font-body);padding:0;text-align:left}
+.footer-links button:hover{color:var(--white)}
+.footer-links button::before{content:'›';color:var(--cyan);font-size:1rem;line-height:1}
+.footer-contact-item{display:flex;gap:var(--space-md);margin-bottom:var(--space-md)}
+.footer-contact-icon{width:36px;height:36px;background:rgba(0,194,255,.1);border:1px solid rgba(0,194,255,.2);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.footer-contact-text{font-size:var(--text-sm);color:rgba(255,255,255,.6);line-height:1.5}
+.footer-contact-text strong{color:var(--white);display:block;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding:var(--space-lg) 0}
+.footer-bottom-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-md)}
+.footer-copyright{font-size:var(--text-sm);color:rgba(255,255,255,.35)}
+.footer-copyright span{color:rgba(255,255,255,.55)}
+.footer-bottom-links{display:flex;gap:var(--space-lg)}
+.footer-bottom-links a{font-size:var(--text-xs);color:rgba(255,255,255,.35);transition:color .2s}
+.footer-bottom-links a:hover{color:var(--cyan)}
+.social-links{display:flex;gap:var(--space-sm);margin-top:var(--space-lg)}
+.social-link{display:flex;align-items:center;justify-content:center;width:38px;height:38px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);color:rgba(255,255,255,.6);font-size:.95rem;transition:all .2s;text-decoration:none}
+.social-link:hover{background:rgba(0,194,255,.12);border-color:rgba(0,194,255,.3);color:var(--cyan);transform:translateY(-2px)}
+
+/* ── HERO ───────────────────────────────────────────────────── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--navy-deep);overflow:hidden;padding-top:var(--nav-height)}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 65% 30%,rgba(0,194,255,.09) 0%,transparent 55%),radial-gradient(ellipse 60% 80% at 10% 90%,rgba(22,34,120,.6) 0%,transparent 60%),linear-gradient(160deg,#080F3A 0%,#0D1B5E 40%,#162278 100%)}
+.hero-grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,255,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);pointer-events:none}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:var(--space-sm);padding:.35rem 1rem;background:rgba(0,194,255,.1);border:1px solid rgba(0,194,255,.25);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:var(--space-xl)}
+.hero-eyebrow .dot{width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:pulseDot 2s infinite}
+@keyframes pulseDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hero-title{font-family:var(--font-display);font-size:clamp(3.5rem,9vw,7rem);font-weight:900;color:var(--white);line-height:.95;letter-spacing:-.03em;margin-bottom:var(--space-xl)}
+.hero-title .accent{color:var(--cyan)}
+.hero-title .outline{display:block;-webkit-text-stroke:1.5px rgba(255,255,255,.4);color:transparent}
+.hero-body{font-size:var(--text-xl);color:rgba(255,255,255,.65);line-height:1.7;max-width:560px;margin-bottom:var(--space-2xl);font-weight:300}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-md);margin-bottom:var(--space-3xl)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:var(--space-xl);padding-top:var(--space-2xl);border-top:1px solid rgba(255,255,255,.08)}
+.hero-stat-num{font-family:var(--font-display);font-size:var(--text-4xl);font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em}
+.hero-stat-num span{color:var(--cyan)}
+.hero-stat-label{font-size:var(--text-xs);color:rgba(255,255,255,.45);font-weight:500;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.scroll-indicator{position:absolute;bottom:var(--space-xl);left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:var(--space-sm);color:rgba(255,255,255,.35);font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;z-index:2}
+.scroll-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(0,194,255,.6),transparent);animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%,100%{transform:scaleY(1);opacity:1}50%{transform:scaleY(.5);opacity:.4}}
+
+/* ── ACCREDITATION STRIP ────────────────────────────────────── */
+.accred-strip{background:rgba(0,194,255,.04);border-top:1px solid rgba(0,194,255,.1);border-bottom:1px solid rgba(0,194,255,.1);padding:var(--space-xl) 0}
+.accred-items{display:flex;align-items:center;justify-content:center;gap:var(--space-3xl);flex-wrap:wrap}
+.accred-item{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:var(--text-muted);font-weight:500}
+.accred-check{width:24px;height:24px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:.7rem;flex-shrink:0;font-weight:700}
+
+/* ── SERVICE CARDS ──────────────────────────────────────────── */
+.service-card{position:relative;background:var(--white);border:1px solid var(--grey-100);border-radius:var(--radius-lg);padding:var(--space-2xl);transition:all .35s cubic-bezier(.4,0,.2,1);overflow:hidden;cursor:pointer;display:flex;flex-direction:column;gap:var(--space-lg)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),var(--cyan));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:rgba(0,194,255,.2)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card-num{font-family:var(--font-display);font-size:var(--text-5xl);font-weight:900;color:var(--grey-100);line-height:1;position:absolute;top:var(--space-lg);right:var(--space-xl);transition:color .3s}
+.service-card:hover .service-card-num{color:rgba(0,194,255,.12)}
+.service-card-icon{width:58px;height:58px;background:var(--navy-deep);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0;position:relative;z-index:1}
+.service-card-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);line-height:1.2;letter-spacing:-.01em;position:relative;z-index:1}
+.service-card-body{font-size:var(--text-sm);color:var(--text-muted);line-height:1.7;flex:1;position:relative;z-index:1}
+.service-card-tags{display:flex;flex-wrap:wrap;gap:var(--space-xs);position:relative;z-index:1}
+.service-card-link{display:inline-flex;align-items:center;gap:6px;font-size:var(--text-sm);font-weight:600;color:var(--navy);transition:color .2s;position:relative;z-index:1}
+.service-card:hover .service-card-link{color:var(--cyan-dim)}
+
+/* ── PROJECT CARDS ──────────────────────────────────────────── */
+.project-card{border-radius:var(--radius-lg);overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm);transition:all .35s cubic-bezier(.4,0,.2,1);border:1px solid var(--grey-100)}
+.project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl)}
+.project-card-img{position:relative;height:220px;background:var(--navy-mid);overflow:hidden}
+.proj-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy-light) 100%);color:rgba(255,255,255,.35);font-size:var(--text-4xl)}
+.proj-placeholder p{font-size:var(--text-sm);letter-spacing:.08em;font-weight:500}
+.project-card-badge{position:absolute;top:var(--space-md);left:var(--space-md)}
+.project-card-body{padding:var(--space-xl)}
+.project-card-cat{font-size:var(--text-xs);font-weight:600;color:var(--cyan-dim);letter-spacing:.12em;text-transform:uppercase;margin-bottom:var(--space-sm)}
+.project-card-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);letter-spacing:-.01em;line-height:1.2;margin-bottom:var(--space-md)}
+.project-card-desc{font-size:var(--text-sm);color:var(--text-muted);line-height:1.7;margin-bottom:var(--space-lg)}
+.project-card-meta{display:flex;align-items:center;justify-content:space-between;padding-top:var(--space-md);border-top:1px solid var(--grey-100)}
+.project-card-client{font-size:var(--text-xs);color:var(--text-muted);font-weight:500}
+.project-card-client strong{color:var(--text);display:block}
+
+/* ── CTA SECTION ────────────────────────────────────────────── */
+.cta-section{background:var(--navy-deep);position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-50%;left:-10%;width:70%;height:200%;background:radial-gradient(ellipse,rgba(0,194,255,.08) 0%,transparent 60%);pointer-events:none}
+.cta-section::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,255,.03) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.cta-content{position:relative;z-index:1;text-align:center;max-width:700px;margin:0 auto}
+.cta-title{font-family:var(--font-display);font-size:clamp(var(--text-4xl),6vw,var(--text-6xl));font-weight:900;color:var(--white);letter-spacing:-.03em;line-height:1.05;margin-bottom:var(--space-lg)}
+.cta-title span{color:var(--cyan)}
+.cta-body{font-size:var(--text-lg);color:rgba(255,255,255,.6);max-width:520px;margin:0 auto var(--space-2xl);line-height:1.75}
+.cta-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:var(--space-md)}
+
+/* ── PAGE HEADER ────────────────────────────────────────────── */
+.page-header{background:var(--navy-deep);padding:calc(var(--nav-height) + 60px) 0 60px;position:relative;overflow:hidden}
+.page-header::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 100% at 60% 50%,rgba(0,194,255,.08) 0%,transparent 70%);pointer-events:none}
+.page-header-wm{position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:var(--font-display);font-size:18vw;font-weight:900;color:rgba(255,255,255,.025);letter-spacing:-.04em;pointer-events:none;user-select:none;line-height:1}
+.page-header-title{font-family:var(--font-display);font-size:clamp(var(--text-5xl),8vw,var(--text-8xl));font-weight:900;color:var(--white);line-height:.95;letter-spacing:-.03em;position:relative;z-index:1}
+.page-header-title span{color:var(--cyan)}
+.page-header-sub{font-size:var(--text-lg);color:rgba(255,255,255,.6);margin-top:var(--space-md);position:relative;z-index:1;max-width:560px}
+.breadcrumb{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:rgba(255,255,255,.5);margin-bottom:var(--space-lg);position:relative;z-index:1}
+.breadcrumb button{color:rgba(255,255,255,.5);transition:color .2s;border:none;background:none;cursor:pointer;font-size:var(--text-sm);font-family:var(--font-body)}
+.breadcrumb button:hover{color:var(--cyan)}
+.breadcrumb .sep{color:rgba(255,255,255,.25)}
+.breadcrumb .current{color:var(--cyan)}
+
+/* ── CERT BADGES ────────────────────────────────────────────── */
+.cert-badge{display:flex;align-items:center;gap:var(--space-md);padding:var(--space-md) var(--space-lg);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-md);transition:var(--transition)}
+.cert-badge:hover{background:rgba(0,194,255,.08);border-color:rgba(0,194,255,.25)}
+.cert-badge-icon{font-size:2rem}
+.cert-badge-text{font-size:var(--text-sm);color:rgba(255,255,255,.8)}
+.cert-badge-title{font-weight:600;color:var(--white);font-size:var(--text-base)}
+
+/* ── EXPERTISE BARS ─────────────────────────────────────────── */
+.exp-bar{margin-bottom:var(--space-lg)}
+.exp-bar-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--space-sm);font-size:var(--text-sm);font-weight:500;color:var(--text)}
+.exp-bar-pct{font-weight:700;color:var(--navy)}
+.exp-track{height:6px;background:var(--grey-100);border-radius:var(--radius-full);overflow:hidden}
+.exp-fill{height:100%;background:linear-gradient(90deg,var(--navy),var(--cyan));border-radius:var(--radius-full);width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+
+/* ── VALUES ─────────────────────────────────────────────────── */
+.value-item{display:flex;align-items:flex-start;gap:var(--space-lg);padding:var(--space-xl);border-radius:var(--radius-lg);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.value-icon{font-size:2rem;flex-shrink:0;margin-top:2px}
+.value-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--white);margin-bottom:var(--space-xs)}
+.value-body{font-size:var(--text-sm);color:rgba(255,255,255,.6);line-height:1.7}
+
+/* ── PROCESS STEPS ──────────────────────────────────────────── */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-xl);position:relative}
+@media(max-width:900px){.process-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.process-steps{grid-template-columns:1fr}}
+.process-step{text-align:center}
+.process-step-num{width:72px;height:72px;background:var(--navy-deep);border:2px solid rgba(0,194,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;color:var(--cyan);margin:0 auto var(--space-lg)}
+.process-step-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--white);margin-bottom:var(--space-sm)}
+.process-step-body{font-size:var(--text-sm);color:rgba(255,255,255,.55);line-height:1.7}
+
+/* ── SERVICE DETAIL ─────────────────────────────────────────── */
+.svc-detail{padding:var(--space-4xl) 0;border-bottom:1px solid var(--grey-100)}
+.svc-detail:last-child{border-bottom:none}
+.svc-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.svc-detail-grid.rev{direction:rtl}
+.svc-detail-grid.rev>*{direction:ltr}
+@media(max-width:900px){.svc-detail-grid,.svc-detail-grid.rev{grid-template-columns:1fr;direction:ltr;gap:3rem}}
+.svc-num{font-family:var(--font-display);font-size:8rem;font-weight:900;color:var(--grey-100);line-height:1;margin-bottom:var(--space-md)}
+.svc-visual{background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy-light) 100%);border-radius:var(--radius-xl);height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);font-size:6rem;color:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.svc-visual p{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:rgba(255,255,255,.5);letter-spacing:.08em}
+.svc-features{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-md);margin-top:var(--space-xl)}
+@media(max-width:640px){.svc-features{grid-template-columns:1fr}}
+.svc-feature{display:flex;align-items:flex-start;gap:var(--space-sm);font-size:var(--text-sm);color:var(--text-muted);line-height:1.6}
+.svc-feature::before{content:'✓';color:var(--cyan-dim);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── FILTER BAR ─────────────────────────────────────────────── */
+.filter-bar{display:flex;flex-wrap:wrap;gap:var(--space-sm);margin-bottom:var(--space-3xl)}
+.filter-btn{padding:.55rem 1.4rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:500;color:var(--text-muted);background:var(--grey-50);border:1.5px solid var(--grey-100);transition:all .2s;cursor:pointer;font-family:var(--font-body)}
+.filter-btn:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.filter-btn.active{background:var(--navy-deep);color:var(--white);border-color:var(--navy-deep)}
+
+/* ── PROJECTS GRID ──────────────────────────────────────────── */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl)}
+@media(max-width:1024px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.projects-grid{grid-template-columns:1fr}}
+[data-filter-item]{transition:opacity .35s,transform .35s}
+
+/* ── STATS BANNER ───────────────────────────────────────────── */
+.stats-banner{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy-deep);border-radius:var(--radius-xl);overflow:hidden;margin-bottom:var(--space-4xl)}
+@media(max-width:768px){.stats-banner{grid-template-columns:repeat(2,1fr)}}
+.stats-banner-item{padding:var(--space-2xl);text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+.stats-banner-item:last-child{border-right:none}
+
+/* ── CONTACT ────────────────────────────────────────────────── */
+.contact-layout{display:grid;grid-template-columns:1fr 1.55fr;gap:5rem;align-items:start}
+@media(max-width:960px){.contact-layout{grid-template-columns:1fr;gap:3rem}}
+.contact-info-panel{position:sticky;top:calc(var(--nav-height) + 2rem)}
+@media(max-width:960px){.contact-info-panel{position:static}}
+.contact-form-card{background:var(--white);border:1px solid var(--grey-100);border-radius:var(--radius-xl);padding:var(--space-3xl);box-shadow:var(--shadow-md)}
+@media(max-width:600px){.contact-form-card{padding:var(--space-xl)}}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg)}
+@media(max-width:600px){.form-row{grid-template-columns:1fr}}
+.form-grid{display:flex;flex-direction:column;gap:var(--space-lg)}
+.svc-checks{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);margin-top:var(--space-sm)}
+@media(max-width:500px){.svc-checks{grid-template-columns:1fr}}
+.check-label{display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:var(--text-muted);cursor:pointer;padding:.6rem .8rem;border:1.5px solid var(--grey-200);border-radius:var(--radius-md);transition:all .2s;user-select:none}
+.check-label:hover{border-color:var(--cyan-dim);color:var(--text)}
+.check-label input[type="checkbox"]{width:16px;height:16px;accent-color:var(--navy);flex-shrink:0}
+.map-box{height:280px;background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy-light) 100%);border-radius:var(--radius-xl);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-md);color:rgba(255,255,255,.45);border:1px solid rgba(0,194,255,.12);position:relative;overflow:hidden;margin-top:var(--space-2xl)}
+.map-box::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,255,.05) 1px,transparent 1px);background-size:40px 40px}
+.map-box-icon{font-size:3rem;position:relative;z-index:1}
+.map-box-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--white);position:relative;z-index:1}
+.map-box-addr{font-size:var(--text-sm);color:rgba(255,255,255,.55);text-align:center;line-height:1.6;position:relative;z-index:1}
+.map-box-btn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:var(--space-sm);padding:.6rem 1.4rem;background:rgba(0,194,255,.12);border:1px solid rgba(0,194,255,.3);border-radius:var(--radius-full);color:var(--cyan);font-size:var(--text-sm);font-weight:600;text-decoration:none;transition:var(--transition);margin-top:var(--space-sm)}
+.map-box-btn:hover{background:rgba(0,194,255,.22)}
+.btn-submit{width:100%;justify-content:center;padding:1rem 2rem;font-size:var(--text-base);font-weight:600;letter-spacing:.04em;border-radius:var(--radius-full);background:var(--navy-deep);color:var(--white);border:none;cursor:pointer;transition:var(--transition);display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-body)}
+.btn-submit:hover{background:var(--navy-mid);transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-submit:disabled{opacity:.7;cursor:not-allowed;transform:none}
+.trust-row{display:flex;align-items:center;flex-wrap:wrap;gap:var(--space-lg);padding-top:var(--space-xl);border-top:1px solid var(--grey-100);margin-top:var(--space-xl)}
+.trust-item{display:flex;align-items:center;gap:var(--space-xs);font-size:var(--text-xs);color:var(--text-muted);font-weight:500}
+.trust-item::before{content:'✓';color:var(--success);font-weight:700}
+.form-success{display:none;text-align:center;padding:var(--space-3xl) var(--space-xl)}
+.form-success.show{display:block}
+
+/* ── ACCORDION ──────────────────────────────────────────────── */
+.acc-item{border:1px solid var(--grey-100);border-radius:var(--radius-lg);margin-bottom:var(--space-md);overflow:hidden;background:var(--white)}
+.acc-hdr{width:100%;text-align:left;padding:var(--space-xl);font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--navy-deep);display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer}
+.acc-chevron{color:var(--cyan);font-size:1.2rem;transition:transform .3s;flex-shrink:0}
+.acc-item.open .acc-chevron{transform:rotate(180deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.4,0,.2,1)}
+.acc-body-inner{padding:0 var(--space-xl) var(--space-xl);font-size:var(--text-base);color:var(--text-muted);line-height:1.75}
+
+/* ── CLIENTS MARQUEE ────────────────────────────────────────── */
+.clients-mask{mask-image:linear-gradient(90deg,transparent,black 15%,black 85%,transparent);overflow:hidden}
+.clients-track{display:flex;gap:var(--space-3xl);animation:marquee 28s linear infinite;width:max-content}
+.clients-track:hover{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.client-logo{display:flex;align-items:center;justify-content:center;height:60px;padding:0 var(--space-lg);filter:grayscale(100%) opacity(.4);transition:filter .3s;white-space:nowrap;font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);color:var(--grey-600);letter-spacing:.08em}
+.client-logo:hover{filter:grayscale(0%) opacity(1)}
+
+/* ── TESTIMONIALS ───────────────────────────────────────────── */
+.testimonial-card{background:var(--white);border-radius:var(--radius-xl);padding:var(--space-2xl);box-shadow:var(--shadow-md);border:1px solid var(--grey-100);position:relative}
+.testimonial-card::before{content:'"';position:absolute;top:-10px;left:var(--space-2xl);font-family:Georgia,serif;font-size:6rem;color:var(--cyan);opacity:.15;line-height:1}
+.testimonial-stars{display:flex;gap:3px;color:var(--gold);font-size:var(--text-sm);margin-bottom:var(--space-lg)}
+.testimonial-body{font-size:var(--text-base);color:var(--text);line-height:1.8;font-style:italic;margin-bottom:var(--space-xl)}
+.testimonial-author{display:flex;align-items:center;gap:var(--space-md)}
+.testimonial-avatar{width:48px;height:48px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:var(--text-xl);color:var(--cyan);flex-shrink:0}
+.testimonial-name{font-weight:600;font-size:var(--text-base);color:var(--text)}
+.testimonial-role{font-size:var(--text-sm);color:var(--text-muted)}
+
+/* ── TOAST ──────────────────────────────────────────────────── */
+.toast{position:fixed;bottom:var(--space-xl);right:var(--space-xl);background:var(--navy-deep);color:var(--white);padding:var(--space-md) var(--space-xl);border-radius:var(--radius-md);border-left:3px solid var(--cyan);box-shadow:var(--shadow-xl);font-size:var(--text-sm);font-weight:500;z-index:2000;transform:translateX(200%);transition:transform .4s cubic-bezier(.4,0,.2,1)}
+.toast.show{transform:translateX(0)}
+.toast.success{border-left-color:var(--success)}
+.toast.error{border-left-color:#EF4444}
+
+/* ── OVERVIEW SECTION ───────────────────────────────────────── */
+.overview-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:900px){.overview-split{grid-template-columns:1fr;gap:3rem}}
+.overview-visual{position:relative;height:440px;border-radius:var(--radius-xl);background:linear-gradient(135deg,var(--navy-mid) 0%,var(--navy-light) 100%);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:8rem;color:rgba(255,255,255,.12)}
+.overview-badge-float{position:absolute;bottom:var(--space-xl);left:var(--space-xl);right:var(--space-xl);background:rgba(8,15,58,.9);backdrop-filter:blur(12px);border:1px solid rgba(0,194,255,.2);border-radius:var(--radius-lg);padding:var(--space-lg) var(--space-xl);display:flex;align-items:center;gap:var(--space-lg)}
+.overview-badge-icon{font-size:2rem}
+.overview-badge-text{font-size:var(--text-sm);color:rgba(255,255,255,.8);line-height:1.5}
+.overview-badge-title{font-weight:700;color:var(--white);display:block}
+.overview-certs{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md);margin-top:var(--space-2xl)}
+
+/* ── EXPERTISE PANEL ────────────────────────────────────────── */
+.exp-panel{background:var(--navy-deep);border-radius:var(--radius-xl);padding:var(--space-2xl);color:var(--white)}
+
+/* ── MISSION CARDS ──────────────────────────────────────────── */
+.mission-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:var(--space-xl)}
+@media(max-width:900px){.mission-grid{grid-template-columns:1fr}}
+.mission-card{padding:var(--space-2xl);border-radius:var(--radius-lg);background:var(--white);border:1px solid var(--grey-100);text-align:center;transition:var(--transition)}
+.mission-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(0,194,255,.2)}
+.mission-card-icon{font-size:3rem;margin-bottom:var(--space-lg);display:block}
+.mission-card-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-md)}
+.mission-card-body{font-size:var(--text-sm);color:var(--text-muted);line-height:1.75}
+
+/* ── WHY ITEMS ──────────────────────────────────────────────── */
+.why-item-dark{display:flex;align-items:flex-start;gap:var(--space-lg);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);padding:var(--space-xl)}
+.why-num-dark{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:900;color:rgba(0,194,255,.3);width:40px;flex-shrink:0;margin-top:2px}
+.why-title-dark{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--white);margin-bottom:var(--space-xs)}
+.why-body-dark{font-size:var(--text-sm);color:rgba(255,255,255,.6);line-height:1.7}
+
+/* ── WHY CONTACT ────────────────────────────────────────────── */
+.why-contact-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl);margin-top:var(--space-3xl)}
+@media(max-width:768px){.why-contact-strip{grid-template-columns:1fr}}
+.why-contact-item{text-align:center;padding:var(--space-xl);border-radius:var(--radius-lg);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+.why-contact-icon{font-size:2.2rem;margin-bottom:var(--space-md);display:block}
+.why-contact-title{font-family:var(--font-display);font-size:var(--text-xl);font-weight:700;color:var(--white);margin-bottom:var(--space-sm)}
+.why-contact-body{font-size:var(--text-sm);color:rgba(255,255,255,.55);line-height:1.7}
+
+/* ── PROJECTS HOMEPAGE STRIP ────────────────────────────────── */
+.proj-strip{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:var(--space-xl)}
+@media(max-width:1024px){.proj-strip{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.proj-strip{grid-template-columns:1fr}}
+.proj-featured .project-card-img{height:320px}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVIGATION ════════════════════════════════════════════ -->
+<nav class="nav nav-solid" id="main-nav">
+  <div class="container nav-inner">
+    <button class="nav-logo" onclick="goTo('home')" aria-label="Rubera Home">
+      <div class="nav-logo-mark"><span></span><span></span><span></span></div>
+      <div class="nav-logo-text">RUBERA<small>Consulting Limited</small></div>
+    </button>
+    <ul class="nav-links">
+      <li><button class="nav-link" data-page="home">Home</button></li>
+      <li><button class="nav-link" data-page="about">About Us</button></li>
+      <li class="nav-item">
+        <button class="nav-link" data-page="services">Services ▾</button>
+        <div class="nav-dropdown">
+          <button onclick="goTo('services','naval')"><span>⚓</span> Naval Architecture</button>
+          <button onclick="goTo('services','outfitting')"><span>🔧</span> Ship Outfitting</button>
+          <button onclick="goTo('services','pm')"><span>📊</span> Project Management</button>
+          <button onclick="goTo('services','procurement')"><span>📦</span> Procurement & Logistics</button>
+          <button onclick="goTo('services','rd')"><span>🔬</span> Research & Development</button>
+          <button onclick="goTo('services','infrastructure')"><span>🏗️</span> Infrastructure</button>
+        </div>
+      </li>
+      <li><button class="nav-link" data-page="projects">Projects</button></li>
+      <li><button class="nav-link" data-page="contact">Contact</button></li>
+    </ul>
+    <button class="btn btn-primary nav-cta" onclick="goTo('contact')">Get in Touch</button>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile" id="mobile-nav">
+  <ul class="nav-mobile-links">
+    <li><button onclick="goTo('home')">Home</button></li>
+    <li><button onclick="goTo('about')">About Us</button></li>
+    <li><button onclick="goTo('services')">Services</button></li>
+    <li><button onclick="goTo('projects')">Projects</button></li>
+    <li><button onclick="goTo('contact')">Contact</button></li>
+  </ul>
+  <button class="btn btn-primary btn-lg" onclick="goTo('contact')">Get in Touch</button>
+  <p style="font-size:var(--text-sm);color:rgba(255,255,255,.4);text-align:center">ruberconsultltd.com · Lagos, Nigeria</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PAGE: HOME                                                  -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="page-home" class="page-view active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="container" style="position:relative;z-index:2;width:100%">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          Bureau Veritas Certified · ISO 9001 Registered
+        </div>
+        <h1 class="hero-title">
+          Engineering<em class="accent"> Excellence</em>
+          <span class="outline">at Sea</span>
+        </h1>
+        <p class="hero-body">Rubera Consulting Limited is a multi-disciplinary team of innovative experts delivering sustainable engineering, infrastructure, and operations solutions for the Maritime and Offshore Industry.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="goTo('services')">Explore Services <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          <button class="btn btn-outline btn-lg" onclick="goTo('projects')">View Portfolio</button>
+        </div>
+        <div class="hero-stats">
+          <div><div class="hero-stat-num"><span data-counter="15" data-suffix="+">15+</span></div><div class="hero-stat-label">Years Experience</div></div>
+          <div><div class="hero-stat-num"><span data-counter="50" data-suffix="+">50+</span></div><div class="hero-stat-label">Projects Delivered</div></div>
+          <div><div class="hero-stat-num"><span data-counter="8">8</span></div><div class="hero-stat-label">Core Services</div></div>
+          <div><div class="hero-stat-num"><span data-counter="9">9</span></div><div class="hero-stat-label">Major Clients</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><div class="scroll-line"></div><span>Scroll</span></div>
+  </section>
+
+  <!-- ACCREDITATION STRIP -->
+  <div class="accred-strip">
+    <div class="container">
+      <div class="accred-items">
+        <div class="accred-item"><div class="accred-check">✓</div><span>Bureau Veritas — BV Mode II Scheme</span></div>
+        <div class="accred-item"><div class="accred-check">✓</div><span>ISO 9001:2015 Certified</span></div>
+        <div class="accred-item"><div class="accred-check">✓</div><span>GRP Passenger & Cargo Vessel Production</span></div>
+        <div class="accred-item"><div class="accred-check">✓</div><span>Inland Waterways Certified</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <section class="section bg-white">
+    <div class="container">
+      <div class="overview-split">
+        <div data-reveal>
+          <span class="section-eyebrow">About Rubera</span>
+          <h2 class="section-title">Bespoke Engineering for a <span>Complex Industry</span></h2>
+          <p class="section-body" style="margin-top:1.5rem">Rubera Consulting Limited is a multi-disciplinary team of innovative and dedicated experts driven by talent, integrity, and aspiration to provide sustainable solutions and services in Engineering, Infrastructure, and Operations for the Maritime and Offshore Industry.</p>
+          <p class="section-body" style="margin-top:1rem">As inventive thinkers and expert collaborators, we combine our expertise, offering bespoke service tailored to fit project requirements and help our clients discover efficient and cost-effective ways of achieving set goals.</p>
+          <div style="margin-top:var(--space-2xl);display:flex;flex-wrap:wrap;gap:var(--space-md)">
+            <button class="btn btn-navy" onclick="goTo('about')">Our Story <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+            <button class="btn btn-outline" style="color:var(--navy);border-color:var(--grey-200)" onclick="goTo('contact')">Contact Us</button>
+          </div>
+        </div>
+        <div class="overview-visual" data-reveal data-reveal-delay="2">
+          ⚓
+          <div class="overview-badge-float">
+            <div class="overview-badge-icon">🏆</div>
+            <div class="overview-badge-text"><span class="overview-badge-title">Bureau Veritas Certified</span>Recognised for production of GRP Passenger & Cargo Vessels for Inland Waterways — valid through Nov 2027.</div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-certs" data-reveal data-reveal-delay="3">
+        <div class="cert-badge"><div class="cert-badge-icon">🔰</div><div><div class="cert-badge-title">Bureau Veritas</div><div class="cert-badge-text">Marine & Offshore Recognition</div></div></div>
+        <div class="cert-badge"><div class="cert-badge-icon">📋</div><div><div class="cert-badge-title">ISO 9001:2015</div><div class="cert-badge-text">Quality Management Certified</div></div></div>
+        <div class="cert-badge"><div class="cert-badge-icon">⚓</div><div><div class="cert-badge-title">Naval Architecture</div><div class="cert-badge-text">Design Approvals Granted</div></div></div>
+        <div class="cert-badge"><div class="cert-badge-icon">🌊</div><div><div class="cert-badge-title">Inland Waterways</div><div class="cert-badge-text">Lagos — Nigeria Operations</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section bg-light">
+    <div class="container">
+      <div style="max-width:600px;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">What We Do</span>
+        <h2 class="section-title">Our Service <span>Interests</span></h2>
+        <p class="section-body" style="margin-top:1.5rem">Our team offers a comprehensive range of specialised services across the maritime value chain — from concept design to operational delivery.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl)">
+        <article class="service-card" data-reveal data-reveal-delay="1" onclick="goTo('services','naval')">
+          <div class="service-card-num">01</div>
+          <div class="service-card-icon">⚓</div>
+          <h3 class="service-card-title">Naval Architecture & Mechanical Engineering</h3>
+          <p class="service-card-body">Full-cycle vessel design including hull form development, stability analysis, structural engineering, and class approval.</p>
+          <div class="service-card-tags"><span class="tag">Hull Design</span><span class="tag">Stability</span><span class="tag">Class Approval</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-reveal data-reveal-delay="2" onclick="goTo('services','outfitting')">
+          <div class="service-card-num">02</div>
+          <div class="service-card-icon">🔧</div>
+          <h3 class="service-card-title">Ship Outfitting & Retrofitting</h3>
+          <p class="service-card-body">Comprehensive outfitting services for new builds and vessel modification programmes. Accommodation assembly and systems integration.</p>
+          <div class="service-card-tags"><span class="tag">Outfitting</span><span class="tag">Retrofitting</span><span class="tag">Accommodation</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-reveal data-reveal-delay="3" onclick="goTo('services','pm')">
+          <div class="service-card-num">03</div>
+          <div class="service-card-icon">📊</div>
+          <h3 class="service-card-title">Project & Resources Management</h3>
+          <p class="service-card-body">End-to-end project governance, stakeholder coordination, and resource optimisation for complex maritime projects.</p>
+          <div class="service-card-tags"><span class="tag">PMO</span><span class="tag">Scheduling</span><span class="tag">Risk</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-reveal data-reveal-delay="1" onclick="goTo('services','procurement')">
+          <div class="service-card-num">04</div>
+          <div class="service-card-icon">📦</div>
+          <h3 class="service-card-title">Global Procurement & Logistics</h3>
+          <p class="service-card-body">Strategic sourcing, supply chain management, and international logistics for shipbuilding equipment and materials.</p>
+          <div class="service-card-tags"><span class="tag">Procurement</span><span class="tag">Supply Chain</span><span class="tag">Logistics</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-reveal data-reveal-delay="2" onclick="goTo('services','rd')">
+          <div class="service-card-num">05</div>
+          <div class="service-card-icon">🔬</div>
+          <h3 class="service-card-title">Research & Development / Feasibility Studies</h3>
+          <p class="service-card-body">Innovative R&D on emerging marine technologies including electric outboard propulsion and CNG hybrid systems.</p>
+          <div class="service-card-tags"><span class="tag">Electric Propulsion</span><span class="tag">CNG Hybrid</span><span class="tag">Feasibility</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+        <article class="service-card" data-reveal data-reveal-delay="3" onclick="goTo('services','infrastructure')">
+          <div class="service-card-num">06</div>
+          <div class="service-card-icon">🏗️</div>
+          <h3 class="service-card-title">Infrastructure Development & Facility Management</h3>
+          <p class="service-card-body">Boatyard optimisation, expansion, and operations management for efficient marine infrastructure.</p>
+          <div class="service-card-tags"><span class="tag">Boatyard</span><span class="tag">Infrastructure</span><span class="tag">Facility Mgmt</span></div>
+          <span class="service-card-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:var(--space-3xl)" data-reveal>
+        <button class="btn btn-navy btn-lg" onclick="goTo('services')">All Services <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS STRIP -->
+  <section class="section bg-white">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:var(--space-xl);margin-bottom:var(--space-3xl)">
+        <div data-reveal>
+          <span class="section-eyebrow">Selected Works</span>
+          <h2 class="section-title">Projects We've <span>Delivered</span></h2>
+        </div>
+        <button class="btn btn-outline" style="color:var(--navy);border-color:var(--grey-200)" onclick="goTo('projects')" data-reveal data-reveal-delay="2">Full Portfolio <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+      </div>
+      <div class="proj-strip">
+        <article class="project-card proj-featured" data-reveal>
+          <div class="project-card-img"><div class="proj-placeholder">🚢<p>40-Passenger Ferry</p></div><div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div></div>
+          <div class="project-card-body">
+            <div class="project-card-cat">Naval Architecture & Engineering</div>
+            <h3 class="project-card-title">40-Passenger Ferry — Bureau Veritas Approval</h3>
+            <p class="project-card-desc">Full design package for a 40-passenger inland waterway ferry with BV class-stamped approval.</p>
+            <div class="project-card-meta"><div class="project-card-client"><strong>Bureau Veritas Stamped</strong>Lagos, Nigeria</div><button class="btn btn-navy" style="padding:.5rem 1.2rem;font-size:var(--text-xs)" onclick="goTo('projects')">View</button></div>
+          </div>
+        </article>
+        <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+          <article class="project-card" data-reveal data-reveal-delay="2">
+            <div class="project-card-img" style="height:160px"><div class="proj-placeholder">⛵<p>NN01 Yacht</p></div><div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div></div>
+            <div class="project-card-body">
+              <div class="project-card-cat">Ship Outfitting</div>
+              <h3 class="project-card-title">NN01 Yacht — Complete Outfitting</h3>
+              <p class="project-card-desc">Full interior outfitting for a private motor yacht.</p>
+            </div>
+          </article>
+          <article class="project-card" data-reveal data-reveal-delay="3">
+            <div class="project-card-img" style="height:160px"><div class="proj-placeholder">⚡<p>Electric Marine</p></div><div class="project-card-badge"><span class="tag tag-navy">R&D</span></div></div>
+            <div class="project-card-body">
+              <div class="project-card-cat">Research & Development</div>
+              <h3 class="project-card-title">Electric Outboard Propulsion Feasibility</h3>
+              <p class="project-card-desc">R&D programme on electric and CNG hybrid outboard systems.</p>
+            </div>
+          </article>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-xl)">
+          <article class="project-card" data-reveal data-reveal-delay="2">
+            <div class="project-card-img" style="height:160px"><div class="proj-placeholder">🚤<p>OMIBUS Ferries</p></div><div class="project-card-badge"><span class="tag tag-navy">PM</span></div></div>
+            <div class="project-card-body">
+              <div class="project-card-cat">Project Management</div>
+              <h3 class="project-card-title">OMIBUS Passenger Ferries</h3>
+              <p class="project-card-desc">Full project management for the OMIBUS ferry fleet programme.</p>
+            </div>
+          </article>
+          <article class="project-card" data-reveal data-reveal-delay="3">
+            <div class="project-card-img" style="height:160px"><div class="proj-placeholder">🏗️<p>Boatyard</p></div><div class="project-card-badge"><span class="tag tag-navy">Infrastructure</span></div></div>
+            <div class="project-card-body">
+              <div class="project-card-cat">Infrastructure</div>
+              <h3 class="project-card-title">Boatyard Optimisation & Expansion</h3>
+              <p class="project-card-desc">Strategic layout and operational expansion of a marine facility.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US (dark) -->
+  <section class="section bg-navy" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 10% 50%,rgba(0,194,255,.07) 0%,transparent 60%);pointer-events:none"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+        <div data-reveal>
+          <span class="section-eyebrow">Why Rubera</span>
+          <h2 class="section-title light">What Makes Us <span>Different</span></h2>
+          <p class="section-body light" style="margin-top:1.5rem">We bring together deep technical expertise, certified quality systems, and a genuine commitment to client outcomes — delivering projects on time, within scope, and built to last.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl);margin-top:var(--space-3xl)">
+            <div><div class="stat-number" data-counter="15" data-suffix="+">15+</div><div class="stat-label">Years Experience</div></div>
+            <div><div class="stat-number" data-counter="50" data-suffix="+">50+</div><div class="stat-label">Projects Completed</div></div>
+            <div><div class="stat-number" data-counter="9">9</div><div class="stat-label">Major Clients</div></div>
+            <div><div class="stat-number">BV</div><div class="stat-label">Certified Excellence</div></div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:var(--space-lg)" data-reveal data-reveal-delay="2">
+          <div class="why-item-dark"><div class="why-num-dark">01</div><div><h3 class="why-title-dark">Certified Technical Excellence</h3><p class="why-body-dark">Bureau Veritas Mode II recognition and ISO 9001:2015 certification provide independent validation of our technical and quality standards.</p></div></div>
+          <div class="why-item-dark"><div class="why-num-dark">02</div><div><h3 class="why-title-dark">Bespoke, Client-First Approach</h3><p class="why-body-dark">Every engagement is tailored. We combine our expertise to fit your specific project requirements, helping you achieve goals efficiently and cost-effectively.</p></div></div>
+          <div class="why-item-dark"><div class="why-num-dark">03</div><div><h3 class="why-title-dark">Multi-Disciplinary Expertise</h3><p class="why-body-dark">Naval architects, mechanical engineers, project managers, and supply chain specialists working together under one roof for integrated delivery.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENTS MARQUEE -->
+  <section class="section-sm" style="background:var(--white);border-top:1px solid var(--grey-100);border-bottom:1px solid var(--grey-100)">
+    <div class="container" style="margin-bottom:var(--space-xl)">
+      <div style="text-align:center" data-reveal>
+        <span class="section-eyebrow">Companies We've Worked With</span>
+        <p style="color:var(--text-muted);font-size:var(--text-base);margin-top:var(--space-sm)">Trusted by leading marine and offshore organisations across Nigeria</p>
+      </div>
+    </div>
+    <div class="clients-mask">
+      <div class="clients-track" id="clients-track">
+        <span class="client-logo">Naval Dockyards Ltd</span>
+        <span class="client-logo">Renotec</span>
+        <span class="client-logo">Gelose Marine Services</span>
+        <span class="client-logo">Caverton Marine</span>
+        <span class="client-logo">Starzs Marine & Engineering</span>
+        <span class="client-logo">Raphwell Engineering & Logistics</span>
+        <span class="client-logo">Abitto Global Services</span>
+        <span class="client-logo">Bureau Veritas</span>
+        <span class="client-logo">NARCOS Shipyard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section bg-light">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Client Feedback</span>
+        <h2 class="section-title">What Our <span>Clients Say</span></h2>
+      </div>
+      <div class="grid-3">
+        <article class="testimonial-card" data-reveal data-reveal-delay="1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-body">"Rubera's team delivered our ferry design package on schedule with Bureau Veritas approval secured first time. Their technical depth and professionalism are exceptional."</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">CN</div><div><div class="testimonial-name">Client Representative</div><div class="testimonial-role">Naval Dockyards Ltd</div></div></div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-body">"The outfitting work on our yacht was meticulously executed — every detail was right. Rubera brought creative solutions to complex installation challenges."</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">GM</div><div><div class="testimonial-name">Project Owner</div><div class="testimonial-role">Private Yacht — NN01</div></div></div>
+        </article>
+        <article class="testimonial-card" data-reveal data-reveal-delay="3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-body">"Their project management on the OMIBUS ferries programme kept everything aligned across multiple stakeholders. Diligent, professional, and results-driven."</p>
+          <div class="testimonial-author"><div class="testimonial-avatar">AB</div><div><div class="testimonial-name">Programme Director</div><div class="testimonial-role">OMIBUS Ferry Programme</div></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content" data-reveal>
+        <h2 class="cta-title">Ready to Start Your <span>Next Project?</span></h2>
+        <p class="cta-body">Whether you need naval architecture, vessel outfitting, procurement support, or feasibility research — we have the expertise and certifications to deliver.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary btn-lg" onclick="goTo('contact')">Talk to Our Team <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+          <button class="btn btn-outline btn-lg" onclick="goTo('services')">Explore Services</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (shared) -->
+  <div id="footer-home"></div>
+</div><!-- /page-home -->
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PAGE: ABOUT                                                 -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="page-about" class="page-view">
+  <header class="page-header">
+    <div class="page-header-wm">ABOUT</div>
+    <div class="container">
+      <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">›</span><span class="current">About Us</span></div>
+      <p class="section-eyebrow">Our Story</p>
+      <h1 class="page-header-title">Who We <span>Are</span></h1>
+      <p class="page-header-sub">A multi-disciplinary team of innovative experts delivering engineering excellence for the Maritime and Offshore Industry.</p>
+    </div>
+  </header>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div class="overview-split">
+        <div data-reveal>
+          <span class="section-eyebrow">Our Identity</span>
+          <h2 class="section-title">Engineering <span>Excellence</span>, Delivered</h2>
+          <p class="section-body" style="margin-top:1.5rem">Rubera Consulting Limited is a multi-disciplinary team of innovative and dedicated experts driven by talent, integrity, and aspiration to provide sustainable solutions and services in Engineering, Infrastructure, and Operations for the Maritime and Offshore Industry.</p>
+          <p class="section-body" style="margin-top:1rem">As inventive thinkers and expert collaborators, we combine our expertise, offering bespoke service tailored to fit project requirements and help our clients discover efficient and cost-effective ways of achieving their set goals.</p>
+          <p class="section-body" style="margin-top:1rem">Headquartered at 23 Platinum Way (Jakande), Lekki–Epe Expressway, Lagos — we serve clients across Nigeria and the broader West African maritime sector.</p>
+          <div style="margin-top:var(--space-2xl);display:flex;flex-wrap:wrap;gap:var(--space-md)">
+            <button class="btn btn-navy btn-lg" onclick="goTo('contact')">Work With Us</button>
+            <button class="btn btn-outline btn-lg" style="color:var(--navy);border-color:var(--grey-200)" onclick="goTo('projects')">Our Projects</button>
+          </div>
+        </div>
+        <div data-reveal data-reveal-delay="2">
+          <div class="exp-panel">
+            <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--white);margin-bottom:var(--space-xl)">Core Capabilities</h3>
+            <div class="exp-bar"><div class="exp-bar-hdr"><span>Naval Architecture & Design</span><span class="exp-bar-pct">95%</span></div><div class="exp-track"><div class="exp-fill" data-width="95"></div></div></div>
+            <div class="exp-bar"><div class="exp-bar-hdr"><span>Ship Outfitting & Retrofitting</span><span class="exp-bar-pct">90%</span></div><div class="exp-track"><div class="exp-fill" data-width="90"></div></div></div>
+            <div class="exp-bar"><div class="exp-bar-hdr"><span>Project Management</span><span class="exp-bar-pct">92%</span></div><div class="exp-track"><div class="exp-fill" data-width="92"></div></div></div>
+            <div class="exp-bar"><div class="exp-bar-hdr"><span>Procurement & Supply Chain</span><span class="exp-bar-pct">88%</span></div><div class="exp-track"><div class="exp-fill" data-width="88"></div></div></div>
+            <div class="exp-bar"><div class="exp-bar-hdr"><span>R&D / Feasibility Studies</span><span class="exp-bar-pct">85%</span></div><div class="exp-track"><div class="exp-fill" data-width="85"></div></div></div>
+            <div style="margin-top:var(--space-xl);padding-top:var(--space-xl);border-top:1px solid rgba(255,255,255,.1);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl)">
+              <div><div class="stat-number" data-counter="15" data-suffix="+">15+</div><div class="stat-label">Years Experience</div></div>
+              <div><div class="stat-number" data-counter="50" data-suffix="+">50+</div><div class="stat-label">Projects Done</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">What Drives Us</span>
+        <h2 class="section-title">Mission, Vision & <span>Purpose</span></h2>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card" data-reveal data-reveal-delay="1"><span class="mission-card-icon">🎯</span><h3 class="mission-card-title">Our Mission</h3><p class="mission-card-body">To provide sustainable, high-quality engineering and consulting solutions to the Maritime and Offshore Industry — combining talent, integrity, and innovation to help clients achieve their goals efficiently and cost-effectively.</p></div>
+        <div class="mission-card" data-reveal data-reveal-delay="2"><span class="mission-card-icon">🔭</span><h3 class="mission-card-title">Our Vision</h3><p class="mission-card-body">To be West Africa's most trusted multi-disciplinary maritime engineering firm — recognised for technical excellence, certified quality, and a consistent record of on-time, within-scope delivery.</p></div>
+        <div class="mission-card" data-reveal data-reveal-delay="3"><span class="mission-card-icon">🤝</span><h3 class="mission-card-title">Our Approach</h3><p class="mission-card-body">We combine the breadth of a multi-disciplinary team with the depth of sector specialists. Every engagement is bespoke — structured around your project's unique requirements, constraints, and commercial context.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-navy" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 20%,rgba(0,194,255,.07) 0%,transparent 60%);pointer-events:none"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div style="max-width:600px;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Core Principles</span>
+        <h2 class="section-title light">The Values That <span>Guide Us</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-xl)">
+        <div class="value-item" data-reveal data-reveal-delay="1"><span class="value-icon">💡</span><div><h3 class="value-title">Talent</h3><p class="value-body">We recruit and retain exceptional specialists in naval architecture, engineering, project management, and supply chain — delivering results through genuine expertise.</p></div></div>
+        <div class="value-item" data-reveal data-reveal-delay="2"><span class="value-icon">⚖️</span><div><h3 class="value-title">Integrity</h3><p class="value-body">We operate with transparency and honesty at every stage — with clients, partners, and regulators. Our certifications are a reflection of this commitment.</p></div></div>
+        <div class="value-item" data-reveal data-reveal-delay="3"><span class="value-icon">🚀</span><div><h3 class="value-title">Aspiration</h3><p class="value-body">We are inventive thinkers, constantly seeking better solutions. From electric propulsion R&D to innovative boatyard management — we push boundaries.</p></div></div>
+        <div class="value-item" data-reveal data-reveal-delay="4"><span class="value-icon">♻️</span><div><h3 class="value-title">Sustainability</h3><p class="value-body">Every solution considers long-term environmental and operational sustainability — from GRP vessel production to CNG hybrid propulsion research.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Accreditation & Quality</span>
+        <h2 class="section-title">Our <span>Certifications</span></h2>
+      </div>
+      <div class="grid-3">
+        <div class="card" data-reveal data-reveal-delay="1" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">🔰</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">Bureau Veritas</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">BV Mode II Scheme — Marine & Offshore</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">Recognised for production of GRP Passenger and Cargo Vessels for use in Inland Waterways. Valid through November 2027.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">Issued Jun 2024</span></div></div>
+        <div class="card" data-reveal data-reveal-delay="2" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">📋</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">ISO 9001:2015</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">Quality Management System</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">Certified quality management system ensuring consistent, high-quality service delivery across all engineering, procurement, and consulting activities.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">Active Certification</span></div></div>
+        <div class="card" data-reveal data-reveal-delay="3" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">⚓</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">Naval Architecture</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">Design Approvals — BV Stamped</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">40-Passenger Ferry design fully approved and stamped by Bureau Veritas Marine & Offshore. Proof of our design engineering capability at class level.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">BV Stamped Feb 2023</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Our Clients</span>
+        <h2 class="section-title">Companies We've <span>Worked With</span></h2>
+        <p class="section-body" style="margin:1.5rem auto 0;text-align:center">In our years of operation, we have been able to work with great companies who valued the diligence and professionalism we invested in our projects.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xl)">
+        <div class="cert-badge" data-reveal data-reveal-delay="1"><div class="cert-badge-icon">🏛️</div><div><div class="cert-badge-title">Naval Dockyards Ltd</div><div class="cert-badge-text">Government / Defence</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="1"><div class="cert-badge-icon">⚓</div><div><div class="cert-badge-title">NARCOS Shipyard</div><div class="cert-badge-text">Naval Shipyard</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="2"><div class="cert-badge-icon">🔧</div><div><div class="cert-badge-title">Renotec</div><div class="cert-badge-text">Marine Engineering</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="2"><div class="cert-badge-icon">🚢</div><div><div class="cert-badge-title">Gelose Marine Services Nig. Ltd</div><div class="cert-badge-text">Marine Services</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="3"><div class="cert-badge-icon">🌊</div><div><div class="cert-badge-title">Caverton Marine</div><div class="cert-badge-text">Marine Transport</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="3"><div class="cert-badge-icon">⭐</div><div><div class="cert-badge-title">Starzs Marine & Engineering</div><div class="cert-badge-text">Marine Engineering</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="4"><div class="cert-badge-icon">🏗️</div><div><div class="cert-badge-title">Raphwell Engineering & Logistics</div><div class="cert-badge-text">Engineering & Logistics</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="4"><div class="cert-badge-icon">🌍</div><div><div class="cert-badge-title">Abitto Global Services Ltd</div><div class="cert-badge-text">Global Services</div></div></div>
+        <div class="cert-badge" data-reveal data-reveal-delay="5"><div class="cert-badge-icon">🔰</div><div><div class="cert-badge-title">Bureau Veritas</div><div class="cert-badge-text">Certification Body</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container"><div class="cta-content" data-reveal>
+      <h2 class="cta-title">Ready to Work <span>Together?</span></h2>
+      <p class="cta-body">Tell us about your project. Our multi-disciplinary team is ready to develop a bespoke solution tailored to your exact requirements.</p>
+      <div class="cta-actions">
+        <button class="btn btn-primary btn-lg" onclick="goTo('contact')">Start a Conversation <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-outline btn-lg" onclick="goTo('services')">Our Services</button>
+      </div>
+    </div></div>
+  </section>
+  <div id="footer-about"></div>
+</div><!-- /page-about -->
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PAGE: SERVICES                                              -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="page-services" class="page-view">
+  <header class="page-header">
+    <div class="page-header-wm">SERVICES</div>
+    <div class="container">
+      <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">›</span><span class="current">Services</span></div>
+      <p class="section-eyebrow">What We Offer</p>
+      <h1 class="page-header-title">Our Service <span>Interests</span></h1>
+      <p class="page-header-sub">A comprehensive suite of engineering, procurement, and consulting services for the maritime and offshore sector.</p>
+    </div>
+  </header>
+
+  <section class="section bg-light">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Full Spectrum Coverage</span>
+        <h2 class="section-title">Our Team Offers <span>Services Including</span></h2>
+      </div>
+      <div class="grid-4">
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-naval')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">⚓</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Naval Architecture</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-outfitting')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">🔧</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Ship Outfitting</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-pm')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">📊</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Project Management</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-procurement')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">📦</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Procurement</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-rd')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">🔬</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">R&D / Feasibility</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-infrastructure')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">🏗️</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Infrastructure</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-supply')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">🔗</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Supply Chain</h3></div>
+        <div class="card" style="text-align:center;cursor:pointer" onclick="scrollToId('s-training')"><div style="font-size:2.5rem;margin-bottom:var(--space-md)">🎓</div><h3 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;color:var(--navy-deep)">Training</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white">
+    <div class="container">
+      <!-- Naval Architecture -->
+      <div class="svc-detail" id="s-naval">
+        <div class="svc-detail-grid">
+          <div data-reveal><div class="svc-num">01</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Naval Architecture &<br><span>Mechanical Engineering</span></h2><p class="section-body" style="margin-top:1.5rem">Full-cycle vessel design from concept to class-approved construction drawings. Our naval architects bring deep expertise in hull form development, structural analysis, stability, and regulatory compliance across a wide range of vessel types.</p><div class="svc-features"><div class="svc-feature">Hull form design & optimisation</div><div class="svc-feature">Stability analysis & hydrostatics</div><div class="svc-feature">Structural engineering</div><div class="svc-feature">Bureau Veritas class approval</div><div class="svc-feature">Passenger ferries (up to 40-pax)</div><div class="svc-feature">Barges: dumb, crude oil, self-propelled</div><div class="svc-feature">Patrol & defence boats</div><div class="svc-feature">Vessel modification & conversion</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">⚓<p>Naval Architecture</p></div>
+        </div>
+      </div>
+      <!-- Ship Outfitting -->
+      <div class="svc-detail" id="s-outfitting">
+        <div class="svc-detail-grid rev">
+          <div data-reveal><div class="svc-num">02</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Ship Outfitting &<br><span>Retrofitting</span></h2><p class="section-body" style="margin-top:1.5rem">Comprehensive outfitting and retrofitting programmes for new builds and existing vessels. We manage accommodation systems, mechanical installation, and interior finishing to the highest standards.</p><div class="svc-features"><div class="svc-feature">Accommodation outfitting assembly</div><div class="svc-feature">Interior design & finishing</div><div class="svc-feature">Mechanical systems installation</div><div class="svc-feature">Electrical systems integration</div><div class="svc-feature">Vessel retrofit & modification</div><div class="svc-feature">Yacht refits & upgrades</div><div class="svc-feature">FRP / GRP vessel mould construction</div><div class="svc-feature">Quality inspection & sign-off</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">🔧<p>Ship Outfitting</p></div>
+        </div>
+      </div>
+      <!-- Project Management -->
+      <div class="svc-detail" id="s-pm">
+        <div class="svc-detail-grid">
+          <div data-reveal><div class="svc-num">03</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Project & Resources<br><span>Management</span></h2><p class="section-body" style="margin-top:1.5rem">End-to-end project governance for complex maritime programmes. From scheduling and stakeholder management to resource allocation and risk control.</p><div class="svc-features"><div class="svc-feature">Project planning & scheduling</div><div class="svc-feature">Stakeholder coordination</div><div class="svc-feature">Budget management & control</div><div class="svc-feature">Risk assessment & mitigation</div><div class="svc-feature">Multi-party project coordination</div><div class="svc-feature">Progress reporting & documentation</div><div class="svc-feature">Quality assurance management</div><div class="svc-feature">Post-project review</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">📊<p>Project Management</p></div>
+        </div>
+      </div>
+      <!-- Procurement -->
+      <div class="svc-detail" id="s-procurement">
+        <div class="svc-detail-grid rev">
+          <div data-reveal><div class="svc-num">04</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Supply Chain &<br><span>Global Procurement</span></h2><p class="section-body" style="margin-top:1.5rem">Strategic sourcing and international logistics for all shipbuilding and outfitting requirements. We manage the full procurement cycle from vendor qualification through to delivery and inspection.</p><div class="svc-features"><div class="svc-feature">Global vendor sourcing & qualification</div><div class="svc-feature">Shipbuilding equipment procurement</div><div class="svc-feature">Materials & consumables supply</div><div class="svc-feature">International freight & logistics</div><div class="svc-feature">Import documentation & customs</div><div class="svc-feature">Supply chain optimisation</div><div class="svc-feature">Inspection & quality control at source</div><div class="svc-feature">Contract management</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">📦<p>Procurement & Logistics</p></div>
+        </div>
+      </div>
+      <!-- R&D -->
+      <div class="svc-detail" id="s-rd">
+        <div class="svc-detail-grid">
+          <div data-reveal><div class="svc-num">05</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Research & Development /<br><span>Feasibility Studies</span></h2><p class="section-body" style="margin-top:1.5rem">Applied R&D into emerging marine technologies and evidence-based feasibility studies. Our work on electric and CNG hybrid outboard propulsion places us at the frontier of sustainable marine engineering.</p><div class="svc-features"><div class="svc-feature">Electric outboard propulsion systems</div><div class="svc-feature">CNG hybrid outboard development</div><div class="svc-feature">Technology feasibility assessment</div><div class="svc-feature">Commercial viability analysis</div><div class="svc-feature">Environmental impact studies</div><div class="svc-feature">Regulatory pathway assessment</div><div class="svc-feature">Prototype concept development</div><div class="svc-feature">Partnership & licensing advisory</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">🔬<p>Research & Development</p></div>
+        </div>
+      </div>
+      <!-- Infrastructure -->
+      <div class="svc-detail" id="s-infrastructure">
+        <div class="svc-detail-grid rev">
+          <div data-reveal><div class="svc-num">06</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Infrastructure Development &<br><span>Facility Management</span></h2><p class="section-body" style="margin-top:1.5rem">We plan, develop, and manage marine infrastructure — from boatyard optimisation and expansion to full facility management for efficient, sustainable operations.</p><div class="svc-features"><div class="svc-feature">Boatyard layout optimisation</div><div class="svc-feature">Facility expansion planning</div><div class="svc-feature">Boatyard operations management</div><div class="svc-feature">Marine infrastructure design</div><div class="svc-feature">Operational workflow improvement</div><div class="svc-feature">Health, safety & compliance</div><div class="svc-feature">Equipment & plant management</div><div class="svc-feature">Maintenance programme development</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">🏗️<p>Infrastructure</p></div>
+        </div>
+      </div>
+      <!-- Supply Chain -->
+      <div class="svc-detail" id="s-supply">
+        <div class="svc-detail-grid">
+          <div data-reveal><div class="svc-num">07</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Resource <span>Management</span></h2><p class="section-body" style="margin-top:1.5rem">Efficient allocation and management of human capital, equipment, and operational resources across complex maritime projects.</p><div class="svc-features"><div class="svc-feature">Workforce planning & deployment</div><div class="svc-feature">Subcontractor management</div><div class="svc-feature">Equipment allocation & tracking</div><div class="svc-feature">Cost optimisation strategies</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About This Service</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">🔗<p>Resource Management</p></div>
+        </div>
+      </div>
+      <!-- Training -->
+      <div class="svc-detail" id="s-training">
+        <div class="svc-detail-grid rev">
+          <div data-reveal><div class="svc-num">08</div><span class="section-eyebrow">Core Service</span><h2 class="section-title">Training <span>Development</span></h2><p class="section-body" style="margin-top:1.5rem">Structured training programmes in naval design software and 3D modelling tools. We equip engineers and technicians with the skills needed for modern maritime engineering practice.</p><div class="svc-features"><div class="svc-feature">AutoShip — naval design software</div><div class="svc-feature">AutoCAD — 2D/3D technical drawing</div><div class="svc-feature">Rhino 3D — surface modelling</div><div class="svc-feature">SketchUp — 3D visualisation</div><div class="svc-feature">Blender — 3D rendering & animation</div><div class="svc-feature">Tailored training programmes</div></div><div style="margin-top:var(--space-xl)"><button class="btn btn-navy" onclick="goTo('contact')">Enquire About Training</button></div></div>
+          <div class="svc-visual" data-reveal data-reveal-delay="2">🎓<p>Training Development</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-navy" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 20% 50%,rgba(0,194,255,.07) 0%,transparent 60%);pointer-events:none"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">How We Work</span>
+        <h2 class="section-title light">Our <span>Engagement Process</span></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step" data-reveal data-reveal-delay="1"><div class="process-step-num">01</div><h3 class="process-step-title">Initial Consultation</h3><p class="process-step-body">We listen. Understand your project, scope, constraints, and goals through a structured discovery meeting.</p></div>
+        <div class="process-step" data-reveal data-reveal-delay="2"><div class="process-step-num">02</div><h3 class="process-step-title">Proposal & Scope</h3><p class="process-step-body">We develop a bespoke proposal with clear deliverables, timeline, and commercial terms.</p></div>
+        <div class="process-step" data-reveal data-reveal-delay="3"><div class="process-step-num">03</div><h3 class="process-step-title">Execution</h3><p class="process-step-body">Our multi-disciplinary team executes with precision. Regular updates and milestone reviews keep you informed.</p></div>
+        <div class="process-step" data-reveal data-reveal-delay="4"><div class="process-step-num">04</div><h3 class="process-step-title">Delivery & Support</h3><p class="process-step-body">Deliverables issued with full documentation and certification where applicable. Post-delivery support always available.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section cta-section">
+    <div class="container"><div class="cta-content" data-reveal>
+      <h2 class="cta-title">Need a <span>Specialist?</span></h2>
+      <p class="cta-body">Tell us about your project challenge. Our team will design a service solution precisely matched to your requirements.</p>
+      <div class="cta-actions">
+        <button class="btn btn-primary btn-lg" onclick="goTo('contact')">Request a Proposal <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-outline btn-lg" onclick="goTo('projects')">See Our Work</button>
+      </div>
+    </div></div>
+  </section>
+  <div id="footer-services"></div>
+</div><!-- /page-services -->
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PAGE: PROJECTS                                              -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="page-projects" class="page-view">
+  <header class="page-header">
+    <div class="page-header-wm">WORKS</div>
+    <div class="container">
+      <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">›</span><span class="current">Projects</span></div>
+      <p class="section-eyebrow">Portfolio</p>
+      <h1 class="page-header-title">Selected <span>Works</span></h1>
+      <p class="page-header-sub">A cross-section of projects we have directly delivered — from ferry design approvals to vessel outfitting, R&D, and boatyard management.</p>
+    </div>
+  </header>
+  <section class="section bg-white">
+    <div class="container">
+      <div class="stats-banner" data-reveal>
+        <div class="stats-banner-item"><div class="stat-number" data-counter="50" data-suffix="+">50+</div><div class="stat-label">Projects Delivered</div></div>
+        <div class="stats-banner-item"><div class="stat-number" data-counter="9">9</div><div class="stat-label">Major Clients</div></div>
+        <div class="stats-banner-item"><div class="stat-number" data-counter="6">6</div><div class="stat-label">Service Disciplines</div></div>
+        <div class="stats-banner-item"><div class="stat-number">BV</div><div class="stat-label">Class Approved Designs</div></div>
+      </div>
+      <div class="filter-bar" role="group">
+        <button class="filter-btn active" data-filter-btn="all">All Projects</button>
+        <button class="filter-btn" data-filter-btn="naval">Naval Architecture</button>
+        <button class="filter-btn" data-filter-btn="outfitting">Ship Outfitting</button>
+        <button class="filter-btn" data-filter-btn="pm">Project Management</button>
+        <button class="filter-btn" data-filter-btn="rd">R&D</button>
+        <button class="filter-btn" data-filter-btn="infrastructure">Infrastructure</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card" data-filter-item="naval" data-reveal data-reveal-delay="1"><div class="project-card-img"><div class="proj-placeholder">🚢<p>Ferry Design</p></div><div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div></div><div class="project-card-body"><div class="project-card-cat">Naval Architecture & Engineering</div><h2 class="project-card-title">40-Passenger Ferry — Design Approvals</h2><p class="project-card-desc">Complete design package for a 40-passenger inland waterway ferry with Bureau Veritas class approval stamped February 2023.</p><div class="project-card-meta"><div class="project-card-client"><strong>Bureau Veritas Stamped</strong>Lagos, Nigeria</div><span class="tag">BV Approved</span></div></div></article>
+
+        <article class="project-card" data-filter-item="naval" data-reveal data-reveal-delay="2"><div class="project-card-img"><div class="proj-placeholder">🛢️<p>Barge Design</p></div><div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div></div><div class="project-card-body"><div class="project-card-cat">Naval Architecture & Engineering</div><h2 class="project-card-title">10,000MT Crude Oil Dumb Barge</h2><p class="project-card-desc">Full structural and layout design for a 10,000 metric tonne crude oil dumb barge with longitudinal section drawings.</p><div class="project-card-meta"><div class="project-card-client"><strong>Design & Illustration</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="naval" data-reveal data-reveal-delay="3"><div class="project-card-img"><div class="proj-placeholder">🏠<p>House Boat</p></div><div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div></div><div class="project-card-body"><div class="project-card-cat">Naval Architecture & Engineering</div><h2 class="project-card-title">Houseboat — Design & Engineering</h2><p class="project-card-desc">Concept-to-drawing houseboat design with full arrangement plans, structural engineering, and stability analysis.</p><div class="project-card-meta"><div class="project-card-client"><strong>Design Engineering</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="naval" data-reveal data-reveal-delay="1"><div class="project-card-img"><div class="proj-placeholder">🛥️<p>Patrol Boat</p></div><div class="project-card-badge"><span class="tag tag-navy">Naval Architecture</span></div></div><div class="project-card-body"><div class="project-card-cat">Naval Architecture — Defence</div><h2 class="project-card-title">Patrol Boat — Design Illustrations & Detailing</h2><p class="project-card-desc">Comprehensive design package including 3D illustrations, structural detailing, and systems arrangement drawings.</p><div class="project-card-meta"><div class="project-card-client"><strong>Defence Sector</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="outfitting" data-reveal data-reveal-delay="2"><div class="project-card-img"><div class="proj-placeholder">⛵<p>NN01 Yacht</p></div><div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div></div><div class="project-card-body"><div class="project-card-cat">Ship Outfitting & Retrofitting</div><h2 class="project-card-title">NN01 Yacht — Complete Outfitting</h2><p class="project-card-desc">Full interior outfitting of a private motor yacht including accommodation assembly, joinery, and systems installation.</p><div class="project-card-meta"><div class="project-card-client"><strong>Private Client</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="outfitting" data-reveal data-reveal-delay="3"><div class="project-card-img"><div class="proj-placeholder">⚓<p>Defence Boat</p></div><div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div></div><div class="project-card-body"><div class="project-card-cat">Ship Outfitting — Defence</div><h2 class="project-card-title">Sea Defence Boat III — Outfitting</h2><p class="project-card-desc">Military-grade accommodation and systems outfitting for Nigeria's Sea Defence Boat III programme.</p><div class="project-card-meta"><div class="project-card-client"><strong>Nigerian Navy / Defence</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="outfitting" data-reveal data-reveal-delay="1"><div class="project-card-img"><div class="proj-placeholder">🛏️<p>Accommodation</p></div><div class="project-card-badge"><span class="tag tag-navy">Outfitting</span></div></div><div class="project-card-body"><div class="project-card-cat">Accommodation Outfitting Assembly</div><h2 class="project-card-title">Marine Accommodation Outfitting Assembly</h2><p class="project-card-desc">Design, fabrication, and installation of modular marine accommodation — bunk cabins, storage, and crew facilities.</p><div class="project-card-meta"><div class="project-card-client"><strong>Commercial Marine</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="naval" data-reveal data-reveal-delay="2"><div class="project-card-img"><div class="proj-placeholder">🔩<p>FRP Construction</p></div><div class="project-card-badge"><span class="tag tag-navy">Construction</span></div></div><div class="project-card-body"><div class="project-card-cat">Mould Construction & Build</div><h2 class="project-card-title">FRP Boat — Mould Construction</h2><p class="project-card-desc">End-to-end mould construction and GRP fibre-reinforced plastic boat build, from timber mould framework to finished hull.</p><div class="project-card-meta"><div class="project-card-client"><strong>GRP Production</strong>Nigeria</div><span class="tag">BV Recognised</span></div></div></article>
+
+        <article class="project-card" data-filter-item="pm" data-reveal data-reveal-delay="3"><div class="project-card-img"><div class="proj-placeholder">🚤<p>OMIBUS Ferries</p></div><div class="project-card-badge"><span class="tag tag-navy">Project Management</span></div></div><div class="project-card-body"><div class="project-card-cat">Project & Resources Management</div><h2 class="project-card-title">OMIBUS Passenger Ferries</h2><p class="project-card-desc">Full project and resources management for the OMIBUS fleet of inland waterway passenger ferries.</p><div class="project-card-meta"><div class="project-card-client"><strong>OMIBUS Programme</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="rd" data-reveal data-reveal-delay="1"><div class="project-card-img"><div class="proj-placeholder">⚡<p>Electric Marine</p></div><div class="project-card-badge"><span class="tag tag-navy">R&D</span></div></div><div class="project-card-body"><div class="project-card-cat">Research & Development</div><h2 class="project-card-title">Electric Outboard Propulsion — Feasibility</h2><p class="project-card-desc">Applied R&D programme exploring electric outboard propulsion for Nigerian inland waterway vessels.</p><div class="project-card-meta"><div class="project-card-client"><strong>Innovation Programme</strong>Nigeria</div><span class="tag">Ongoing</span></div></div></article>
+
+        <article class="project-card" data-filter-item="rd" data-reveal data-reveal-delay="2"><div class="project-card-img"><div class="proj-placeholder">🌿<p>CNG Hybrid</p></div><div class="project-card-badge"><span class="tag tag-navy">R&D</span></div></div><div class="project-card-body"><div class="project-card-cat">Research & Development</div><h2 class="project-card-title">CNG Hybrid Outboard — Development</h2><p class="project-card-desc">Feasibility development for compressed natural gas hybrid outboard propulsion systems for Nigerian operators.</p><div class="project-card-meta"><div class="project-card-client"><strong>Sustainable Marine</strong>Nigeria</div></div></div></article>
+
+        <article class="project-card" data-filter-item="infrastructure" data-reveal data-reveal-delay="3"><div class="project-card-img"><div class="proj-placeholder">🏗️<p>Boatyard</p></div><div class="project-card-badge"><span class="tag tag-navy">Infrastructure</span></div></div><div class="project-card-body"><div class="project-card-cat">Infrastructure Development</div><h2 class="project-card-title">Boatyard Optimisation & Expansion</h2><p class="project-card-desc">Strategic layout optimisation and physical expansion of a Nigerian boatyard facility — improving throughput, safety, and capacity.</p><div class="project-card-meta"><div class="project-card-client"><strong>Marine Facility</strong>Nigeria</div></div></div></article>
+      </div>
+    </div>
+  </section>
+  <section class="section cta-section">
+    <div class="container"><div class="cta-content" data-reveal>
+      <h2 class="cta-title">Have a <span>Project in Mind?</span></h2>
+      <p class="cta-body">We've delivered across the full maritime value chain. Tell us about your challenge and we'll put together the right team.</p>
+      <div class="cta-actions">
+        <button class="btn btn-primary btn-lg" onclick="goTo('contact')">Discuss Your Project <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+        <button class="btn btn-outline btn-lg" onclick="goTo('services')">Our Services</button>
+      </div>
+    </div></div>
+  </section>
+  <div id="footer-projects"></div>
+</div><!-- /page-projects -->
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- PAGE: CONTACT                                               -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<div id="page-contact" class="page-view">
+  <header class="page-header">
+    <div class="page-header-wm">CONTACT</div>
+    <div class="container">
+      <div class="breadcrumb"><button onclick="goTo('home')">Home</button><span class="sep">›</span><span class="current">Contact Us</span></div>
+      <p class="section-eyebrow">Get in Touch</p>
+      <h1 class="page-header-title">Let's <span>Talk</span></h1>
+      <p class="page-header-sub">Tell us about your project. Our engineering team will respond within one business day with a bespoke approach.</p>
+    </div>
+  </header>
+
+  <section class="section bg-white">
+    <div class="container">
+      <div class="contact-layout">
+        <!-- Info panel -->
+        <div class="contact-info-panel" data-reveal>
+          <h2 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:800;color:var(--navy-deep);letter-spacing:-.02em;line-height:1.1;margin-bottom:var(--space-md)">We'd Love to<br>Hear From You</h2>
+          <p style="font-size:var(--text-base);color:var(--text-muted);line-height:1.75;margin-bottom:var(--space-2xl)">Whether you have a new vessel to design, a retrofit to manage, or a technical challenge that needs a specialist — our multi-disciplinary team is ready to engage.</p>
+
+          <div style="display:flex;flex-direction:column">
+            <div style="display:flex;gap:var(--space-md);align-items:flex-start;padding:var(--space-xl) 0;border-bottom:1px solid var(--grey-100)">
+              <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">📍</div>
+              <div><div style="font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:4px">Office Address</div><div style="font-size:var(--text-base);font-weight:500;color:var(--text);line-height:1.6">23 Platinum Way (Jakande),<br>Lekki–Epe Expressway,<br>Lagos, Nigeria</div></div>
+            </div>
+            <div style="display:flex;gap:var(--space-md);align-items:flex-start;padding:var(--space-xl) 0;border-bottom:1px solid var(--grey-100)">
+              <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">🌐</div>
+              <div><div style="font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:4px">Website</div><div style="font-size:var(--text-base);font-weight:500;color:var(--text)"><a href="https://www.ruberconsultltd.com" target="_blank" rel="noopener" style="color:var(--cyan-dim)">www.ruberconsultltd.com</a></div></div>
+            </div>
+            <div style="display:flex;gap:var(--space-md);align-items:flex-start;padding:var(--space-xl) 0;border-bottom:1px solid var(--grey-100)">
+              <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">✉️</div>
+              <div><div style="font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:4px">Email</div><div style="font-size:var(--text-base);font-weight:500;color:var(--text)"><a href="mailto:info@ruberconsultltd.com" style="color:var(--cyan-dim)">info@ruberconsultltd.com</a></div></div>
+            </div>
+            <div style="display:flex;gap:var(--space-md);align-items:flex-start;padding:var(--space-xl) 0">
+              <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0">🕐</div>
+              <div><div style="font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--text-muted);margin-bottom:4px">Working Hours</div><div style="font-size:var(--text-base);font-weight:500;color:var(--text);line-height:1.6">Mon – Fri: 8:00am – 5:00pm WAT<br><span style="font-size:var(--text-sm);color:var(--text-muted)">Response within 1 business day</span></div></div>
+            </div>
+          </div>
+
+          <div style="margin-top:var(--space-xl);padding:var(--space-xl);background:var(--navy-deep);border-radius:var(--radius-lg)">
+            <p style="font-size:var(--text-xs);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:var(--space-md)">Certifications</p>
+            <div style="display:flex;flex-direction:column;gap:var(--space-sm)">
+              <div style="display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:rgba(255,255,255,.75)"><span style="color:#10B981;font-weight:700">✓</span> Bureau Veritas — BV Mode II Scheme</div>
+              <div style="display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:rgba(255,255,255,.75)"><span style="color:#10B981;font-weight:700">✓</span> ISO 9001:2015 Quality Management</div>
+              <div style="display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:rgba(255,255,255,.75)"><span style="color:#10B981;font-weight:700">✓</span> GRP Vessel Production Recognised</div>
+              <div style="display:flex;align-items:center;gap:var(--space-sm);font-size:var(--text-sm);color:rgba(255,255,255,.75)"><span style="color:#10B981;font-weight:700">✓</span> Naval Architecture Design Approvals</div>
+            </div>
+          </div>
+
+          <div class="map-box">
+            <div class="map-box-icon">📍</div>
+            <div class="map-box-title">Our Office</div>
+            <div class="map-box-addr">23 Platinum Way (Jakande)<br>Lekki–Epe Expressway, Lagos</div>
+            <a href="https://maps.google.com/?q=Jakande+Lekki+Lagos+Nigeria" target="_blank" rel="noopener" class="map-box-btn">Open in Google Maps ↗</a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div data-reveal data-reveal-delay="2">
+          <div class="contact-form-card">
+            <div id="form-success-msg" class="form-success">
+              <div style="font-size:4rem;margin-bottom:var(--space-lg)">✅</div>
+              <h3 style="font-family:var(--font-display);font-size:var(--text-3xl);font-weight:800;color:var(--navy-deep);margin-bottom:var(--space-md)">Message Received!</h3>
+              <p style="font-size:var(--text-base);color:var(--text-muted);line-height:1.75">Thank you for reaching out. A member of the Rubera team will review your enquiry and respond within one business day.</p>
+              <button onclick="resetContactForm()" class="btn btn-navy" style="margin-top:2rem">Send Another Message</button>
+            </div>
+            <form id="contact-form" novalidate>
+              <div style="margin-bottom:var(--space-2xl)">
+                <h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;color:var(--navy-deep);margin-bottom:var(--space-xs)">Send an Enquiry</h3>
+                <p style="font-size:var(--text-sm);color:var(--text-muted)">All fields marked <span style="color:#EF4444">*</span> are required.</p>
+              </div>
+              <div class="form-grid">
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="fname">First Name <span style="color:#EF4444">*</span></label><input type="text" id="fname" name="first_name" class="form-input" placeholder="e.g. Chidi" required autocomplete="given-name"></div>
+                  <div class="form-group"><label class="form-label" for="lname">Last Name <span style="color:#EF4444">*</span></label><input type="text" id="lname" name="last_name" class="form-input" placeholder="e.g. Okafor" required autocomplete="family-name"></div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="cemail">Email Address <span style="color:#EF4444">*</span></label><input type="email" id="cemail" name="email" class="form-input" placeholder="you@company.com" required autocomplete="email"></div>
+                  <div class="form-group"><label class="form-label" for="cphone">Phone / WhatsApp</label><input type="tel" id="cphone" name="phone" class="form-input" placeholder="+234 800 000 0000" autocomplete="tel"></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="ccompany">Company / Organisation</label><input type="text" id="ccompany" name="company" class="form-input" placeholder="Your company name"></div>
+                <div class="form-group"><label class="form-label" for="csubject">Subject / Project Title <span style="color:#EF4444">*</span></label><input type="text" id="csubject" name="subject" class="form-input" placeholder="e.g. 40-Pax Ferry Design" required></div>
+                <div class="form-group">
+                  <label class="form-label">Service Interest(s)</label>
+                  <div class="svc-checks">
+                    <label class="check-label"><input type="checkbox" name="service[]" value="naval"><span>Naval Architecture</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="outfitting"><span>Ship Outfitting</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="pm"><span>Project Management</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="procurement"><span>Procurement & Logistics</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="rd"><span>R&D / Feasibility</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="infrastructure"><span>Infrastructure</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="training"><span>Training</span></label>
+                    <label class="check-label"><input type="checkbox" name="service[]" value="other"><span>Other / Not Sure</span></label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group"><label class="form-label" for="cbudget">Budget Range</label><select id="cbudget" name="budget" class="form-input form-select"><option value="">— Optional —</option><option value="under-5m">Under ₦5 million</option><option value="5m-20m">₦5M – ₦20M</option><option value="20m-50m">₦20M – ₦50M</option><option value="50m-100m">₦50M – ₦100M</option><option value="over-100m">Over ₦100 million</option><option value="tbd">To be discussed</option></select></div>
+                  <div class="form-group"><label class="form-label" for="ctimeline">Start Timeline</label><select id="ctimeline" name="timeline" class="form-input form-select"><option value="">— Optional —</option><option value="asap">As soon as possible</option><option value="1month">Within 1 month</option><option value="1-3months">1–3 months</option><option value="3-6months">3–6 months</option><option value="6plus">6+ months</option></select></div>
+                </div>
+                <div class="form-group"><label class="form-label" for="cmessage">Project Description <span style="color:#EF4444">*</span></label><textarea id="cmessage" name="message" class="form-input form-textarea" placeholder="Tell us about your project — vessel type, scope, key challenges, or any specific requirements..." required rows="5"></textarea></div>
+                <div class="form-group">
+                  <label class="check-label" style="border:none;padding:0">
+                    <input type="checkbox" id="cprivacy" name="privacy" required>
+                    <span style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.5">I agree that Rubera Consulting Limited may contact me regarding this enquiry. <span style="color:#EF4444">*</span></span>
+                  </label>
+                </div>
+                <button type="submit" class="btn-submit" id="contact-submit-btn">
+                  <span id="contact-submit-text">Send Enquiry</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                </button>
+              </div>
+              <div class="trust-row">
+                <div class="trust-item">Bureau Veritas Certified</div>
+                <div class="trust-item">ISO 9001:2015</div>
+                <div class="trust-item">Response within 1 business day</div>
+                <div class="trust-item">Confidential</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-navy" style="position:relative;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 80% 20%,rgba(0,194,255,.07) 0%,transparent 60%);pointer-events:none"></div>
+    <div class="container" style="position:relative;z-index:1">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Why Engage Us</span>
+        <h2 class="section-title light">What You Can <span>Expect</span></h2>
+      </div>
+      <div class="why-contact-strip">
+        <div class="why-contact-item" data-reveal data-reveal-delay="1"><span class="why-contact-icon">⚡</span><h3 class="why-contact-title">Fast Response</h3><p class="why-contact-body">We acknowledge every enquiry within one business day and propose a structured engagement approach within 3–5 working days.</p></div>
+        <div class="why-contact-item" data-reveal data-reveal-delay="2"><span class="why-contact-icon">🎯</span><h3 class="why-contact-title">Bespoke Approach</h3><p class="why-contact-body">No off-the-shelf packages. Every proposal is developed specifically around your project requirements and commercial context.</p></div>
+        <div class="why-contact-item" data-reveal data-reveal-delay="3"><span class="why-contact-icon">🔰</span><h3 class="why-contact-title">Certified Capability</h3><p class="why-contact-body">Bureau Veritas recognised and ISO 9001:2015 certified — independent validation that you're engaging an engineering firm that meets the highest standards.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light">
+    <div class="container" style="max-width:720px;margin:0 auto">
+      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
+        <span class="section-eyebrow">Common Questions</span>
+        <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+      </div>
+      <div data-reveal>
+        <div class="acc-item"><button class="acc-hdr"><span>What types of vessels do you design?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">We design passenger ferries (up to 40 passengers), crude oil dumb barges, self-propelled barges, houseboats, patrol boats, yachts, and GRP/FRP craft. Our designs are developed to Bureau Veritas class standards where required.</div></div></div>
+        <div class="acc-item"><button class="acc-hdr"><span>Can you manage a full project from design to delivery?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">Yes. We offer end-to-end project delivery encompassing naval architecture, procurement, outfitting, project management, and certification support. Our multi-disciplinary team allows us to act as a single point of responsibility across the entire project lifecycle.</div></div></div>
+        <div class="acc-item"><button class="acc-hdr"><span>Are your designs accepted by Bureau Veritas?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">Yes. Rubera Consulting holds Bureau Veritas Mode II Scheme recognition for the production of GRP Passenger and Cargo Vessels for Inland Waterways. Our 40-passenger ferry design has been BV stamped and approved.</div></div></div>
+        <div class="acc-item"><button class="acc-hdr"><span>Do you work outside Lagos?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">Absolutely. While based in Lagos, we have worked on projects across Nigeria and can engage remotely on design, engineering, and consulting work. For on-site requirements, we deploy team members to any Nigerian location.</div></div></div>
+        <div class="acc-item"><button class="acc-hdr"><span>What software do you use for design work?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">Our design team works with AutoShip for naval architecture, AutoCAD for 2D technical drawings, Rhino 3D for surface modelling, SketchUp for 3D visualisation, and Blender for 3D rendering and animations. We also provide training in all of these tools.</div></div></div>
+        <div class="acc-item"><button class="acc-hdr"><span>How do you structure your fees?</span><span class="acc-chevron">▾</span></button><div class="acc-body"><div class="acc-body-inner">Our fees are tailored to each project. We typically work on a fixed-fee basis for design and consulting work, with milestone-based payments tied to agreed deliverables. All commercial terms are agreed before work commences.</div></div></div>
+      </div>
+    </div>
+  </section>
+  <div id="footer-contact"></div>
+</div><!-- /page-contact -->
+
+<!-- ══ SHARED FOOTER TEMPLATE ════════════════════════════════ -->
+<template id="footer-template">
+  <footer class="footer">
+    <div class="footer-watermark">RCL</div>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">
+              <div class="nav-logo-mark"><span></span><span></span><span></span></div>
+              <div class="footer-logo-text">RUBERA<small>Consulting Limited</small></div>
+            </div>
+            <p class="footer-tagline">Multi-disciplinary engineering experts delivering sustainable solutions for the Maritime and Offshore Industry. Talent. Integrity. Aspiration.</p>
+            <div class="footer-certifications">
+              <span class="footer-cert-badge">Bureau Veritas</span>
+              <span class="footer-cert-badge">ISO 9001:2015</span>
+              <span class="footer-cert-badge">BV Mode II</span>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+              <a href="#" class="social-link" aria-label="Email">✉</a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Navigation</div>
+            <div class="footer-links">
+              <button onclick="goTo('home')">Home</button>
+              <button onclick="goTo('about')">About Us</button>
+              <button onclick="goTo('services')">Services</button>
+              <button onclick="goTo('projects')">Projects</button>
+              <button onclick="goTo('contact')">Contact</button>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Services</div>
+            <div class="footer-links">
+              <button onclick="goTo('services','s-naval')">Naval Architecture</button>
+              <button onclick="goTo('services','s-outfitting')">Ship Outfitting</button>
+              <button onclick="goTo('services','s-procurement')">Global Procurement</button>
+              <button onclick="goTo('services','s-rd')">Research & Development</button>
+              <button onclick="goTo('services','s-infrastructure')">Infrastructure</button>
+              <button onclick="goTo('services','s-training')">Training</button>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title">Contact</div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">📍</div>
+              <div class="footer-contact-text"><strong>Address</strong>23 Platinum Way (Jakande),<br>Lekki–Epe Expressway, Lagos</div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">🌐</div>
+              <div class="footer-contact-text"><strong>Website</strong><a href="https://www.ruberconsultltd.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,.6)">ruberconsultltd.com</a></div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="footer-contact-icon">✉️</div>
+              <div class="footer-contact-text"><strong>Email</strong><a href="mailto:info@ruberconsultltd.com" style="color:rgba(255,255,255,.6)">info@ruberconsultltd.com</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p class="footer-copyright">&copy; <span class="footer-year">2025</span> <span>Rubera Consulting Limited.</span> All rights reserved. Registered in Nigeria.</p>
+          <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<!-- ══ TOAST ═════════════════════════════════════════════════ -->
+<div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- ALL JAVASCRIPT INLINED                                      -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── FOOTER INJECTION ────────────────────────────────────── */
+function injectFooters() {
+  const tpl = document.getElementById('footer-template');
+  ['home','about','services','projects','contact'].forEach(page => {
+    const slot = document.getElementById('footer-' + page);
+    if (slot && tpl) {
+      slot.appendChild(tpl.content.cloneNode(true));
+    }
+  });
+  document.querySelectorAll('.footer-year').forEach(el => {
+    el.textContent = new Date().getFullYear();
+  });
+}
+
+/* ── SPA NAVIGATION ──────────────────────────────────────── */
+let currentPage = 'home';
+
+function goTo(page, anchor) {
+  // Close mobile nav
+  document.getElementById('nav-hamburger').classList.remove('open');
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.body.style.overflow = '';
+
+  // Hide all pages
+  document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+
+  // Show target
+  const target = document.getElementById('page-' + page);
+  if (!target) return;
+  target.classList.add('active');
+  currentPage = page;
+
+  // Scroll to top (or anchor)
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  if (anchor) {
+    setTimeout(() => {
+      const el = document.getElementById(anchor);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+  }
+
+  // Update nav active state
+  document.querySelectorAll('.nav-link[data-page]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.page === page);
+  });
+
+  // Re-run reveal for new page content
+  setTimeout(initReveal, 60);
+  setTimeout(initCounters, 80);
+  setTimeout(initExpertiseBars, 100);
+  setTimeout(initAccordion, 60);
+}
+window.goTo = goTo;
+
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+window.scrollToId = scrollToId;
+
+/* ── NAV SCROLL ──────────────────────────────────────────── */
+window.addEventListener('scroll', () => {
+  document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 30);
+}, { passive: true });
+
+/* ── MOBILE NAV ──────────────────────────────────────────── */
+document.getElementById('nav-hamburger').addEventListener('click', function() {
+  const isOpen = this.classList.toggle('open');
+  document.getElementById('mobile-nav').classList.toggle('open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+/* ── SCROLL REVEAL ───────────────────────────────────────── */
+let revealObserver;
+function initReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  const els = document.querySelectorAll('[data-reveal]:not(.revealed)');
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('revealed'); revealObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => revealObserver.observe(el));
+}
+
+/* ── COUNTER ANIMATION ───────────────────────────────────── */
+const counted = new WeakSet();
+function animateCounter(el) {
+  if (counted.has(el)) return;
+  counted.add(el);
+  const target = parseFloat(el.dataset.counter);
+  const suffix = el.dataset.suffix || '';
+  const duration = 2000;
+  const start = performance.now();
+  function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * ease) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = target + suffix;
+  }
+  requestAnimationFrame(step);
+}
+function initCounters() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) animateCounter(e.target); });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-counter]').forEach(el => obs.observe(el));
+}
+
+/* ── EXPERTISE BARS ──────────────────────────────────────── */
+const filledBars = new WeakSet();
+function initExpertiseBars() {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !filledBars.has(e.target)) {
+        filledBars.add(e.target);
+        const w = e.target.dataset.width;
+        setTimeout(() => { e.target.style.width = w + '%'; }, 200);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.exp-fill').forEach(el => obs.observe(el));
+}
+
+/* ── ACCORDION ───────────────────────────────────────────── */
+function initAccordion() {
+  document.querySelectorAll('.acc-item').forEach(item => {
+    if (item._accInit) return;
+    item._accInit = true;
+    const hdr = item.querySelector('.acc-hdr');
+    const body = item.querySelector('.acc-body');
+    if (!hdr || !body) return;
+    hdr.addEventListener('click', () => {
+      const open = item.classList.contains('open');
+      document.querySelectorAll('.acc-item.open').forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.acc-body');
+        if (b) b.style.maxHeight = '0';
+      });
+      if (!open) {
+        item.classList.add('open');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+    body.style.maxHeight = '0';
+  });
+}
+
+/* ── PROJECT FILTER ──────────────────────────────────────── */
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-filter-btn]');
+  if (!btn) return;
+  document.querySelectorAll('[data-filter-btn]').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const cat = btn.dataset.filterBtn;
+  document.querySelectorAll('[data-filter-item]').forEach(item => {
+    const show = cat === 'all' || item.dataset.filterItem === cat;
+    if (!show) { item.style.display = 'none'; return; }
+    item.style.display = '';
+    item.style.opacity = '0';
+    item.style.transform = 'scale(.96)';
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      item.style.transition = 'opacity .35s,transform .35s';
+      item.style.opacity = '1';
+      item.style.transform = 'scale(1)';
+    }));
+  });
+});
+
+/* ── MARQUEE DUPLICATE ───────────────────────────────────── */
+function initMarquee() {
+  const track = document.getElementById('clients-track');
+  if (!track || track._duped) return;
+  track._duped = true;
+  const clone = track.cloneNode(true);
+  clone.removeAttribute('id');
+  clone.setAttribute('aria-hidden', 'true');
+  track.parentElement.appendChild(clone);
+}
+
+/* ── TOAST ───────────────────────────────────────────────── */
+function showToast(msg, type = '') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type;
+  requestAnimationFrame(() => requestAnimationFrame(() => t.classList.add('show')));
+  setTimeout(() => t.classList.remove('show'), 4500);
+}
+window.showToast = showToast;
+
+/* ── CONTACT FORM ────────────────────────────────────────── */
+document.addEventListener('submit', async e => {
+  if (e.target.id !== 'contact-form') return;
+  e.preventDefault();
+  const form = e.target;
+  let valid = true;
+
+  form.querySelectorAll('[required]').forEach(field => {
+    if (field.type === 'checkbox' && !field.checked) {
+      valid = false;
+      field.closest('.check-label').style.borderColor = '#EF4444';
+    } else if (field.type !== 'checkbox' && !field.value.trim()) {
+      valid = false;
+      field.style.borderColor = '#EF4444';
+    } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+      valid = false;
+      field.style.borderColor = '#EF4444';
+    } else {
+      field.style.borderColor = '';
+      if (field.closest('.check-label')) field.closest('.check-label').style.borderColor = '';
+    }
+  });
+
+  if (!valid) { showToast('Please fill all required fields.', 'error'); return; }
+
+  const btn = document.getElementById('contact-submit-btn');
+  const txt = document.getElementById('contact-submit-text');
+  txt.textContent = 'Sending…';
+  btn.disabled = true;
+
+  await new Promise(r => setTimeout(r, 1600));
+
+  form.style.display = 'none';
+  document.getElementById('form-success-msg').classList.add('show');
+});
+
+function resetContactForm() {
+  const form = document.getElementById('contact-form');
+  const success = document.getElementById('form-success-msg');
+  const btn = document.getElementById('contact-submit-btn');
+  const txt = document.getElementById('contact-submit-text');
+  if (form) { form.reset(); form.style.display = ''; }
+  if (success) success.classList.remove('show');
+  if (btn) btn.disabled = false;
+  if (txt) txt.textContent = 'Send Enquiry';
+}
+window.resetContactForm = resetContactForm;
+
+/* ── BOOT ────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  injectFooters();
+  initReveal();
+  initCounters();
+  initExpertiseBars();
+  initAccordion();
+  initMarquee();
+  // Set initial nav active
+  document.querySelectorAll('.nav-link[data-page="home"]').forEach(b => b.classList.add('active'));
+});
+</script>
+</body>
+</html>
