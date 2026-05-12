@@ -455,21 +455,21 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
       <div class="nav-logo-text">RUBERA<small>Consulting Limited</small></div>
     </button>
     <ul class="nav-links">
-      <li><button class="nav-link" data-page="home">Home</button></li>
-      <li><button class="nav-link" data-page="about">About Us</button></li>
+      <li><button class="nav-link" onclick="goTo('home')" data-page="home">Home</button></li>
+      <li><button class="nav-link" onclick="goTo('about')"data-page="about">About Us</button></li>
       <li class="nav-item">
         <button class="nav-link" data-page="services">Services ▾</button>
         <div class="nav-dropdown">
-          <button onclick="goTo('services','naval')"><span>⚓</span> Naval Architecture</button>
-          <button onclick="goTo('services','outfitting')"><span>🔧</span> Ship Outfitting</button>
-          <button onclick="goTo('services','pm')"><span>📊</span> Project Management</button>
-          <button onclick="goTo('services','procurement')"><span>📦</span> Procurement & Logistics</button>
-          <button onclick="goTo('services','rd')"><span>🔬</span> Research & Development</button>
-          <button onclick="goTo('services','infrastructure')"><span>🏗️</span> Infrastructure</button>
+          <button onclick="goTo('services','naval')"> Naval Architecture</button>
+          <button onclick="goTo('services','outfitting')">Ship Outfitting</button>
+          <button onclick="goTo('services','pm')">Project Management</button>
+          <button onclick="goTo('services','procurement')">Procurement & Logistics</button>
+          <button onclick="goTo('services','rd')">Research & Development</button>
+          <button onclick="goTo('services','infrastructure')"> Infrastructure</button>
         </div>
       </li>
-      <li><button class="nav-link" data-page="projects">Projects</button></li>
-      <li><button class="nav-link" data-page="contact">Contact</button></li>
+      <li><button class="nav-link" onclick="goTo('projects')" data-page="projects">Projects</button></li>
+      <li><button class="nav-link" onclick="goTo('contact')" data-page="contact">Contact</button></li>
     </ul>
     <button class="btn btn-primary nav-cta" onclick="goTo('contact')">Get in Touch</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -749,7 +749,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
         <article class="testimonial-card" data-reveal data-reveal-delay="2">
           <div class="testimonial-stars">★★★★★</div>
           <p class="testimonial-body">"The outfitting work on our yacht was meticulously executed — every detail was right. Rubera brought creative solutions to complex installation challenges."</p>
-          <div class="testimonial-author"><div class="testimonial-avatar">GM</div><div><div class="testimonial-name">Project Owner</div><div class="testimonial-role">Private Yacht — NN01</div></div></div>
+          <div class="testimonial-author"><div class="testimonial-avatar">GM</div><div><div class="testimonial-name">Project Owner</div><div class="testimonial-role">Private Yacht</div></div></div>
         </article>
         <article class="testimonial-card" data-reveal data-reveal-delay="3">
           <div class="testimonial-stars">★★★★★</div>
