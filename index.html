@@ -455,8 +455,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
       <div class="nav-logo-text">RUBERA<small>Consulting Limited</small></div>
     </button>
     <ul class="nav-links">
-      <li><button class="nav-link" onclick="goTo('home')" data-page="home">Home</button></li>
-      <li><button class="nav-link" onclick="goTo('about')"data-page="about">About Us</button></li>
+      <li><button class="nav-link" onclick="goTo('home')">Home</button></li>
+      <li><button class="nav-link" onclick="goTo('about')">About Us</button></li>
       <li class="nav-item">
         <button class="nav-link" data-page="services">Services ▾</button>
         <div class="nav-dropdown">
@@ -468,8 +468,8 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
           <button onclick="goTo('services','infrastructure')"> Infrastructure</button>
         </div>
       </li>
-      <li><button class="nav-link" onclick="goTo('projects')" data-page="projects">Projects</button></li>
-      <li><button class="nav-link" onclick="goTo('contact')" data-page="contact">Contact</button></li>
+      <li><button class="nav-link" onclick="goTo('projects')">Projects</button></li>
+      <li><button class="nav-link" onclick="goTo('contact')">Contact</button></li>
     </ul>
     <button class="btn btn-primary nav-cta" onclick="goTo('contact')">Get in Touch</button>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -698,7 +698,6 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
             <div><div class="stat-number" data-counter="15" data-suffix="+">15+</div><div class="stat-label">Years Experience</div></div>
             <div><div class="stat-number" data-counter="50" data-suffix="+">50+</div><div class="stat-label">Projects Completed</div></div>
             <div><div class="stat-number" data-counter="9">9</div><div class="stat-label">Major Clients</div></div>
-            <div><div class="stat-number">BV</div><div class="stat-label">Certified Excellence</div></div>
           </div>
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-lg)" data-reveal data-reveal-delay="2">
@@ -734,7 +733,7 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section bg-light">
+<!-- <section class="section bg-light">
     <div class="container">
       <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
         <span class="section-eyebrow">Client Feedback</span>
@@ -850,20 +849,6 @@ h1,h2,h3,h4,h5,h6{font-family:var(--font-display);line-height:1.15;font-weight:7
         <div class="value-item" data-reveal data-reveal-delay="2"><span class="value-icon">⚖️</span><div><h3 class="value-title">Integrity</h3><p class="value-body">We operate with transparency and honesty at every stage — with clients, partners, and regulators. Our certifications are a reflection of this commitment.</p></div></div>
         <div class="value-item" data-reveal data-reveal-delay="3"><span class="value-icon">🚀</span><div><h3 class="value-title">Aspiration</h3><p class="value-body">We are inventive thinkers, constantly seeking better solutions. From electric propulsion R&D to innovative boatyard management — we push boundaries.</p></div></div>
         <div class="value-item" data-reveal data-reveal-delay="4"><span class="value-icon">♻️</span><div><h3 class="value-title">Sustainability</h3><p class="value-body">Every solution considers long-term environmental and operational sustainability — from GRP vessel production to CNG hybrid propulsion research.</p></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section bg-white">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:var(--space-3xl)" data-reveal>
-        <span class="section-eyebrow">Accreditation & Quality</span>
-        <h2 class="section-title">Our <span>Certifications</span></h2>
-      </div>
-      <div class="grid-3">
-        <div class="card" data-reveal data-reveal-delay="1" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">🔰</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">Bureau Veritas</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">BV Mode II Scheme — Marine & Offshore</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">Recognised for production of GRP Passenger and Cargo Vessels for use in Inland Waterways. Valid through November 2027.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">Issued Jun 2024</span></div></div>
-        <div class="card" data-reveal data-reveal-delay="2" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">📋</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">ISO 9001:2015</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">Quality Management System</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">Certified quality management system ensuring consistent, high-quality service delivery across all engineering, procurement, and consulting activities.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">Active Certification</span></div></div>
-        <div class="card" data-reveal data-reveal-delay="3" style="text-align:center"><div style="font-size:3.5rem;margin-bottom:var(--space-lg)">⚓</div><h3 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:var(--navy-deep);margin-bottom:var(--space-sm)">Naval Architecture</h3><p style="font-size:var(--text-sm);color:var(--cyan-dim);font-weight:600;margin-bottom:var(--space-md)">Design Approvals — BV Stamped</p><p style="font-size:var(--text-sm);color:var(--text-muted);line-height:1.7">40-Passenger Ferry design fully approved and stamped by Bureau Veritas Marine & Offshore. Proof of our design engineering capability at class level.</p><div style="margin-top:var(--space-lg);padding-top:var(--space-lg);border-top:1px solid var(--grey-100)"><span class="tag">BV Stamped Feb 2023</span></div></div>
       </div>
     </div>
   </section>
